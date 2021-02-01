@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel='icon' href='demo/img/icon_3.png' type='image/x-icon'/ >
+	<title>RevenueSure | NCCG Biller</title>
+
+		<!-- icon fonts -->
+
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+
+		<!-- Vendor styles -->
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+		<link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+        <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+        <!-- App styles -->
+		<link rel="stylesheet" href="css/app.min.css">
+		<link rel="stylesheet" href="css/daterangepicker.css">
+	
+    </head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                    <img src="demo/img/gifs/preloader.gif">
+                </div>
+				<span class="powerd-container">
+					<strong>Sacco Benki By</strong>
+					<img src="demo/img/logo-files/nouveta-orange.svg">
+				</span>
+            </div>
+
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+                <div class="header__logo hidden-sm-down">
+					<a href="index.html"><img class="the-logo" src="demo/img/logo-files/nairobi-county.png"></a>
+					<h1>
+                        <a href="index.html" class="mb-3">Nairobi City County</a>
+                        <p class="mb-0 text-white font-weight-light text-capitalize font-12px">RevenueSure Biller</p>
+                    </h1>
+                </div>
+                <form class="search">
+                    <div class="search__inner">
+                        <input type="text" class="search__text" placeholder="Search site">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+				
+				<ul class="top-nav">
+                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+					
+					<li data-toggle="tooltip" data-original-title="Time logged in" class=" top-nav__notifications p-0 m-0">
+                        <a href="#" data-toggle="dropdown"  class="top-nav__notify min-width-15px" >
+                            <i class="zmdi zmdi-time"></i>
+                        </a>
+                        
+					</li>
+					
+					<li data-toggle="tooltip" data-original-title="Time logged in " class="">
+                        <a href="#" data-toggle="dropdown"  class="" >
+                            3 min
+                        </a>
+                       
+					</li>
+					
+                    <li class="ml-5" >
+                        <a href="new-parent.html" data-toggle="tooltip" data-original-title="Tasks completed" >
+                            <i class="flaticon-pulse"></i><span class="mx-3">22</span>
+                        </a>
+                    </li>
+                </ul>
+
+                
+            </header>
+
+             <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                           <div class="avatar-char bg-warning text-black mr-3 font-weight-bold">JM</div>
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation">
+						<li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart"></i>Dashboard</a></li>
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-bill"></i>Billing <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="rents.html"><i class="ti-key mr-2"></i>Rents</a></li>
+								<li><a href="business.html"><i class="ti-briefcase mr-2"></i>SBP</a></li>
+								<li><a href="land-rates.html"><i class="ti-direction mr-2"></i>Land Rates</a></li>
+                                <li><a href="new-bill.html"><i class="ti-archive mr-2"></i>Other Bills</a></li>
+                                <li><a href="bind-bills.html"><i class="ti-link mr-2"></i>Bind Bills</a></li>
+                            </ul>
+						</li>
+					
+						<li class="navigation__active"><a href="receipting-bill.html"><i class="flaticon-invoice"></i>Payment & Receipting</a></li>
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-edit"></i>Payment edits  <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="reversal.html"><i class="flaticon-undo mr-2"></i>Reversals</a></li>
+								<li><a href="transfers.html"><i class="flaticon-transfer mr-2"></i>Transfers</a></li>
+								<li><a href=""><i class="zmdi zmdi-edit mr-2"></i>Non Cash Edits</a></li>
+                            </ul>
+                        </li>
+						 <li class="navigation__sub">
+                            <a href="#"><i class="flaticon-document-1"></i>Reports  <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+								<li><a href="bill-raised.html">Bills Raised</a></li>
+								<li><a href="bill-receipted.html">Bills Receipted</a></li>
+								<li><a href="partial-payments.html">Partial Payments</a></li>
+								<li><a href="payment_edits_reports.html">Payment Movements</a></li>
+								<li><a href="tasks.html">User Tasks</a></li>
+								<li><a href="delegations.html">Delegations</a></li>
+								
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-user-2"></i>My Account <i class="zmdi zmdi-caret-down drop-down-icon pt-0"></i></a>
+                            <ul>
+                                <li><a href="my-profile.html"><i class="pe-7s-id mr-2"></i>My profile</a></li>
+								<li><a href="account-logs.html"><i class="icon_hourglass mr-2"></i>Account Logs</a></li>
+								<li><a href="deligate.html"><i class="pe-7s-portfolio mr-2"></i>Delegate role</a></li>
+								<li><a href="my-delegations.html"><i class="zmdi zmdi-case-check mr-2"></i>My Delegations</a></li>
+								<li><a href="password.html"><i class="flaticon-forgot mr-2"></i>Change password</a></li>
+								
+                            </ul>
+                        </li>
+						
+						 <li class="navigation__sub">
+                            <a href="#"><i class="flaticon-friends"></i>User Accounts  <i class="zmdi zmdi-caret-down drop-down-icon pt-0"></i></a>
+                            <ul>
+                                <li><a href="new-user.html"><i class="flaticon-add-user mr-2"></i>New user</a></li>
+                                <li><a href="new-user2.html"><i class="flaticon-add-user mr-2"></i>New user 2</a></li>
+								<li><a href="active-users.html"><i class="zmdi zmdi-check-all"></i>Active users</a></li>
+								<li><a href="blocked-users.html"><i class="zmdi zmdi-block"></i>Inactive users</a></li>
+								<li><a href="user-management.html"><i class="zmdi zmdi-settings mr-2"></i>User Management</a></li>
+                                
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="ti-settings"></i>Setup<i class="zmdi zmdi-caret-down drop-down-icon pt-0"></i></a>
+                            <ul>
+                                <li><a href=""><i class="flaticon-calculator mr-2"></i>Default settings</a></li>
+                                <li><a href=""><i class="flaticon-calculator-2 mr-2"></i>Chart of accounts</a></li>
+                                <li><a href=""><i class="flaticon-money mr-2"></i>Cost center</a></li>
+								<li><a href=""><i class="flaticon-transfer-2 mr-2"></i>Income Types</a></li>
+                                <li><a href="departments.html"><i class="flaticon-switching-user mr-2"></i>Departments</a></li>
+                                <li><a href="agencies.html"><i class="flaticon-tie mr-2"></i>Agencies</a></li>
+								
+                                
+                            </ul>
+                        </li>
+                         <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </aside>
+			
+			 <section class="content dark-body">
+                <header class="content__title px-0 border-0">
+				 	<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">Biller Dashboard</h1>
+							</span>
+							<div class="">
+								<ol class="breadcrumb border-0">
+                                    <li class="breadcrumb-item">Home</li>
+									<li class="breadcrumb-item">Dashboard</li>                                
+									<li class="breadcrumb-item active">Month Start Date - Month End Date</li>                                    
+								
+								</ol>
+								
+							</div>
+						</div>
+                           
+                        <div class="actions d-flex">
+                            <div id="reportrange"
+                                style="background: #2C2F33; color:white; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                <i class="ti-calendar"></i>&nbsp;
+                                <span></span> <i class="fa fa-caret-down"></i>
+                            </div>  
+                            <button class="btn btn-success d-none text-nowrap " id="date-reset" onclick="reset_date()">Reset Date</button>
+						</div>
+					</div>
+				</header>
+				<div class="row clearfix other-summarys">
+					<div class="col-lg-4 col-md-12">
+						<div class="">
+								<h2>Collection summary</h2>
+							</div>
+						<div class="card dark-card height-54">
+							
+							<div class="card-body">
+								<div class="row text-center">
+									<div class="col-12 pb-4 pt-4 today-collections">
+										<label class="mb-0">Total Collected</label>
+										<h4 class="font-light">9,951,093</h4>
+									</div>
+								</div>
+							</div>
+							<div class="card-body the-streams height-54 dark-body">
+								<h5 class="mb-5 text-othercolor">Billing summary</h5>
+								<div class="table-responsive">
+									<table class="table w-100 home-table-2">
+										<thead class="" scope="row">
+											<tr class="">
+												<th></th>
+												<th class="text-white">Counts</th>
+												<th class="text-right text-white">Value in KES</th>
+											</tr>
+										</thead>
+										<tbody class="w-100">
+											
+												<tr scope="row">
+													
+													<td><a href="bill-raised.html">Bills raised</a></td>
+													<td>25</td>
+													<td class="text-right">KES 25,250</td>
+												
+												</tr>
+											
+											<tr>
+												<td><a href="bill-receipted.html">Bills Receipted</a></td>
+												<td>17</td>
+												<td class="text-right">KES 5,250</td>
+											</tr>
+
+											<tr>
+												<td><a href="pending-bill.html">Pending Bills</a></td>
+												<td>8</td>
+												<td class="text-right">KES 13,582</td>
+											</tr>
+
+											<tr>
+												<td><a href="bill-transfer.html">Bill Transfers</a></td>
+												<td>5</td>
+												<td class="text-right">KES 14,520</td>
+											</tr>
+											<tr>
+												<td><a href="bill-reversals.html">Bill Reversals</a></td>
+												<td>3</td>
+												<td class="text-right">KES 7,000</td>
+											</tr>
+											<tr>
+												<td><a href="bills-edited.html">Bill Edits</a></td>
+												<td>0</td>
+												<td class="text-right">KES 0</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+
+								<div class="w-100 mt-5 pt-5">
+								<hr class="text-othercolor">
+								<h4>Total transactions: 58</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-md-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="">
+									<h2>Revenue collections summary</h2>
+								</div>
+								
+								<div class="card user_statistics dark-card">
+            
+									<div class="card-body">                                
+										<div id="monthly_revenue_container" style="height: 400px"></div>
+                                        
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								
+								<div class="card user_statistics dark-card">
+
+									<div class="card-body">                            
+										<div id="transaction-data" style="height: 338px"></div>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+						</div>
+					</div>                
+				</div>
+				
+			
+                <footer class="footer hidden-xs-down">
+                    <p>Powered by RevenueSure</p>
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+            <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+		
+		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="vendors/select2/js/select2.full.min.js"></script>
+        <script src="vendors/dropzone/dropzone.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/nouislider/nouislider.min.js"></script>
+        <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+        <script src="vendors/flatpickr/flatpickr.min.js"></script>
+        <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+        <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+        <script src="vendors/autosize/autosize.min.js"></script>
+        <script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+		
+		<!--high chart-->
+		<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+		<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+
+		<script src="vendors/highcharts/highchart.js"></script>
+		<script src="vendors/highcharts/data.js"></script>
+		<script src="vendors/highcharts/drilldown.js"></script>
+		<script src="vendors/highcharts/exporting.js"></script>
+		<script src="vendors/highcharts/export-data.js"></script>
+		<script src="vendors/highcharts/accesibility.js"></script>
+		<script src="vendors/daterangepicker/daterangepicker.min.js"></script>
+		<script src="js/highcharts/bullet.js"></script>
+		
+		<script src="js/highcharts/highcharts-more.js"></script>
+		<script src="js/highcharts/theme1.js"></script>
+		<!--owl corousel-->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+
+
+        <!-- App functions and actions -->
+     	<script src="js/wow.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>
+					
+        <script src="js/chart-data/revenue-targets.js"></script>
+        <script src="js/chart-data/revenue-streams.js"></script>
+		 <script src="js/chart-data/revenue-by-bank.js"></script>
+        <script src="js/chart-data/revenue-collected.js"></script>
+		<script src="js/chart-data/perfomance.js"></script>
+        <script src="js/chart-data/hourly-revenue-collection.js"></script>
+        <script src="js/chart-data/monthly_revenue_container.js"></script>
+
+		
+	
+		<!--map scripts-->
+		
+		<script src="js/chart-data/map-data.js"></script>
+		
+       
+		
+		
+		
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
+</html>

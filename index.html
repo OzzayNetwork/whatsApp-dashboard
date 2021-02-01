@@ -1,3539 +1,638 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Nouveta">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel='icon' href='demo/img/sacco-benki-fav.png' type='image/x-icon'/ >
+		<title>WhatsApp | WhatsApp dashboard</title>
 
-    <!-- Libs CSS -->
-    <link rel="stylesheet" href="assets/fonts/feather/feather.min.css">
-    <link rel="stylesheet" href="assets/libs/highlight.js/styles/vs2015.css">
-    <link rel="stylesheet" href="assets/libs/quill/dist/quill.core.css">
-    <link rel="stylesheet" href="assets/libs/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="assets/libs/flatpickr/dist/flatpickr.min.css">
+		<!-- icon fonts -->
 
-    <link rel="stylesheet" href="assets/libs/bootstrap-select/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="assets/libs/jquery-scrollbar/jquery.scrollbar.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
 
-    <!-- Theme CSS -->
-      
-    <link rel="stylesheet" href="assets/css/theme.min.css" id="stylesheetLight">
+		<!-- Vendor styles -->
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+		<link rel="stylesheet" href="css/flaticon-font/flaticon.css">
 
-    <link rel="stylesheet" href="assets/css/theme-dark.min.css" id="stylesheetDark">
-    <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+        <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
 
-    <style>body { display: none; }</style>
-    
+        <!-- App styles -->
+		<link rel="stylesheet" href="css/app.min.css">
+		<link rel="stylesheet" href="css/daterangepicker.css">
+	
+    </head>
 
-    <title>Merchants Management</title>
-  </head>
-  <body>
-
-    <!-- MODALS
-    ================================================== -->
-    
-    <!-- Modal: Demo -->
-    <div class="modal fade fixed-right" id="modalDemo" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-vertical" role="document">
-        <form class="modal-content" id="demoForm">
-          <div class="modal-body">
-        
-            <!-- Close -->
-            <a class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </a>
-
-            <div class="text-center">
-              <img src="assets/img/illustrations/designer-life.svg" alt="..." class="img-fluid mb-3">
-            </div>
-
-            <h2 class="text-center mb-2">
-              Make Dashkit Your Own
-            </h2>
-
-            <p class="text-center mb-4">
-              Set preferences that will be cookied for your live preview demonstration.
-            </p>
-
-            <hr class="mb-4">
-
-            <h4 class="mb-1">
-              Color Scheme
-            </h4>
-
-            <p class="small text-muted mb-3">
-              Overall light or dark presentation.
-            </p>
-
-            <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
-              <label class="btn btn-white active col">
-                <input type="radio" name="colorScheme" id="colorSchemeLight" value="light" checked> <i class="fe fe-sun mr-2"></i> Light Mode
-              </label>
-              <label class="btn btn-white col ml-2">
-                <input type="radio" name="colorScheme" id="colorSchemeDark" value="dark"> <i class="fe fe-moon mr-2"></i> Dark Mode
-              </label>
-            </div>
-
-            <h4 class="mb-1">
-              Navigation Position
-            </h4>
-
-            <p class="small text-muted mb-3">
-              Select the primary navigation paradigm for your app.
-            </p>
-
-            <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
-              <label class="btn btn-white active col">
-                <input type="radio" name="navPosition" id="navPositionSidenav" value="sidenav" checked> Sidenav
-              </label>
-              <label class="btn btn-white col ml-2">
-                <input type="radio" name="navPosition" id="navPositionTopnav" value="topnav"> Topnav
-              </label>
-              <label class="btn btn-white col ml-2">
-                <input type="radio" name="navPosition" id="navPositionCombo" value="combo"> Combo
-              </label>
-            </div>
-
-            <h4 class="mb-1">
-              Sidebar Color
-            </h4>
-
-            <p class="small text-muted mb-3">
-              Usually dictated by the color scheme, but can be overriden. 
-            </p>
-
-            <div class="btn-group-toggle d-flex mb-4" data-toggle="buttons">
-              <label class="btn btn-white active col">
-                <input type="radio" name="sidebarColor" id="sidebarColorDefault" value="default" checked> Default
-              </label>
-              <label class="btn btn-white col ml-2">
-                <input type="radio" name="sidebarColor" id="sidebarColorVibrant" value="vibrant"> Vibrant
-              </label>
-            </div>
-      
-          </div>
-          <div class="modal-footer border-0">
-        
-            <button type="submit" class="btn btn-block btn-primary mt-auto">
-              Preview
-            </button>
-
-          </div>
-        </form>
-      </div>
-    </div>
-    
-
-    <!-- Modal: Members -->
-    <div class="modal fade" id="modalMembers" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-card card" data-toggle="lists" data-lists-values='["name"]'>
-            <div class="card-header">
-              <div class="row align-items-center">
-                <div class="col">
-
-                  <!-- Title -->
-                  <h4 class="card-header-title" id="exampleModalCenterTitle">
-                    Add a member
-                  </h4>
-              
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                    <img src="demo/img/gifs/preloader.gif">
                 </div>
-                <div class="col-auto">
+				<span class="powerd-container">
+					<strong>Sacco Benki By</strong>
+					<img src="demo/img/logo-files/nouveta-orange.svg">
+					
+				</span>
+            </div>
 
-                  <!-- Close -->
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-              
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
                 </div>
-              </div> <!-- / .row -->
-            </div>
-            <div class="card-header">
-          
-              <!-- Form -->
-              <form>
-                <div class="input-group input-group-flush input-group-merge">
-                  <input type="search" class="form-control form-control-prepended search" placeholder="Search">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <span class="fe fe-search"></span>
-                    </div>
-                  </div>
+                <div class="header__logo hidden-sm-down">
+					<a href="index.html"><img class="the-logo" src="demo/img/logo-files/logo-white-notxt.png"></a>
+					<h1>
+                        <a href="index.html" class="mb-3">Nouveta LTD</a>
+                        <p class="mb-0 text-white font-weight-light text-capitalize font-12px">WhatsApp transactions</p>
+                    </h1>
                 </div>
-              </form>
-
-            </div>
-            <div class="card-body">
-
-              <!-- List group -->
-              <ul class="list-group list-group-flush list my-n3">
-                <li class="list-group-item px-0">
-              
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <a href="profile-posts.html" class="avatar">
-                        <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
-                      </a>
-
+                <form class="search">
+                    <div class="search__inner">
+                        <input type="text" class="search__text" placeholder="Search site">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
                     </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="mb-1 name">
-                        <a href="profile-posts.html">Miyah Myles</a>
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small mb-0">
-                        <span class="text-success">●</span> Online
-                      </p>
-                  
-                    </div>
-                    <div class="col-auto">
-                  
-                      <!-- Button -->
-                      <a href="#!" class="btn btn-sm btn-white">
-                        Add
-                      </a>
-
-                    </div>
-                  </div> <!-- / .row -->
-
-                </li>
-                <li class="list-group-item px-0">
-              
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <a href="profile-posts.html" class="avatar">
-                        <img src="assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
-                      </a>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="mb-1 name">
-                        <a href="profile-posts.html">Ryu Duke</a>
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small mb-0">
-                        <span class="text-success">●</span> Online
-                      </p>
-                  
-                    </div>
-                    <div class="col-auto">
-                  
-                      <!-- Button -->
-                      <a href="#!" class="btn btn-sm btn-white">
-                        Add
-                      </a>
-
-                    </div>
-                  </div> <!-- / .row -->
-
-                </li>
-                <li class="list-group-item px-0">
-              
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <a href="profile-posts.html" class="avatar">
-                        <img src="assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
-                      </a>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="mb-1 name">
-                        <a href="profile-posts.html">Glen Rouse</a>
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small mb-0">
-                        <span class="text-warning">●</span> Busy
-                      </p>
-                  
-                    </div>
-                    <div class="col-auto">
-                  
-                      <!-- Button -->
-                      <a href="#!" class="btn btn-sm btn-white">
-                        Add
-                      </a>
-
-                    </div>
-                  </div> <!-- / .row -->
-
-                </li>
-                <li class="list-group-item px-0">
-              
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <a href="profile-posts.html" class="avatar">
-                        <img src="assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
-                      </a>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="mb-1 name">
-                        <a href="profile-posts.html">Grace Gross</a>
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small mb-0">
-                        <span class="text-danger">●</span> Offline
-                      </p>
-                  
-                    </div>
-                    <div class="col-auto">
-                  
-                      <!-- Button -->
-                      <a href="#!" class="btn btn-sm btn-white">
-                        Add
-                      </a>
-
-                    </div>
-                  </div> <!-- / .row -->
-
-                </li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal: Search -->
-    <div class="modal fade" id="sidebarModalSearch" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-vertical" role="document">
-        <div class="modal-content">
-          <div class="modal-body" data-toggle="lists" data-lists-values='["name"]'>
-     
-            <!-- Form -->
-            <form class="mb-4">
-              <div class="input-group input-group-merge">
-                <input type="search" class="form-control form-control-prepended search" placeholder="Search">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <span class="fe fe-search"></span>
-                  </div>
-                </div>
-              </div>
-            </form>
-
-            <!-- List group -->
-            <div class="my-n3">
-              <div class="list-group list-group-flush list">
-                <a href="team-overview.html" class="list-group-item px-0">
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <div class="avatar">
-                        <img src="assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
-                      </div>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="text-body mb-1 name">
-                        Airbnb
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small text-muted mb-0">
-                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-                      </p>
-                  
-                    </div>
-                  </div> <!-- / .row -->
-                </a>
-                <a href="team-overview.html" class="list-group-item px-0">
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <div class="avatar">
-                        <img src="assets/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
-                      </div>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="text-body mb-1 name">
-                        Medium Corporation
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small text-muted mb-0">
-                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-                      </p>
-                  
-                    </div>
-                  </div> <!-- / .row -->
-                </a>
-                <a href="project-overview.html" class="list-group-item px-0">
-
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <div class="avatar avatar-4by3">
-                        <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
-                      </div>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="text-body mb-1 name">
-                        Homepage Redesign
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small text-muted mb-0">
-                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                      </p>
-                  
-                    </div>
-                  </div> <!-- / .row -->
-
-                </a>
-                <a href="project-overview.html" class="list-group-item px-0">
-
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <div class="avatar avatar-4by3">
-                        <img src="assets/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
-                      </div>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="text-body mb-1 name">
-                        Travels & Time
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small text-muted mb-0">
-                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                      </p>
-                  
-                    </div>
-                  </div> <!-- / .row -->
-
-                </a>
-                <a href="project-overview.html" class="list-group-item px-0">
-
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <div class="avatar avatar-4by3">
-                        <img src="assets/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
-                      </div>
-
-                    </div>
-                    <div class="col ml-n2">
-
-                      <!-- Title -->
-                      <h4 class="text-body mb-1 name">
-                        Safari Exploration
-                      </h4>
-
-                      <!-- Time -->
-                      <p class="small text-muted mb-0">
-                        <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                      </p>
-                  
-                    </div>
-                  </div> <!-- / .row -->
-            
-                </a>
-                <a href="profile-posts.html" class="list-group-item px-0">
-            
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <div class="avatar">
-                        <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                      </div>
-
-                    </div>
-                    <div class="col ml-n2">
-                  
-                      <!-- Title -->
-                      <h4 class="text-body mb-1 name">
-                        Dianna Smiley
-                      </h4>
-
-                      <!-- Status -->
-                      <p class="text-body small mb-0">
-                        <span class="text-success">●</span> Online
-                      </p>
-
-                    </div>
-                  </div> <!-- / .row -->
-
-                </a>
-                <a href="profile-posts.html" class="list-group-item px-0">
-
-                  <div class="row align-items-center">
-                    <div class="col-auto">
-                  
-                      <!-- Avatar -->
-                      <div class="avatar">
-                        <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                      </div>
-
-                    </div>
-                    <div class="col ml-n2">
-                  
-                      <!-- Title -->
-                      <h4 class="text-body mb-1 name">
-                        Ab Hadley
-                      </h4>
-
-                      <!-- Status -->
-                      <p class="text-body small mb-0">
-                        <span class="text-danger">●</span> Offline
-                      </p>
-
-                    </div>
-                  </div> <!-- / .row -->
-            
-                </a>
-              </div>
-            </div>
-      
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal: Activity -->
-    <div class="modal fade" id="sidebarModalActivity" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-vertical" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-
-            <!-- Title -->
-            <h4 class="modal-title">
-              Notifications
-            </h4>
-
-            <!-- Close -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">
-                &times;
-              </span>
-            </button>
-        
-          </div>
-          <div class="modal-body">
-
-            <!-- List group -->
-            <div class="list-group list-group-flush my-n3">
-              <a class="list-group-item px-0" href="#!">
-          
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Dianna Smiley</strong> shared your post with <strong class="text-body">Ab Hadley</strong>, <strong class="text-body">Adolfo Hess</strong>, and <strong class="text-body">3 others</strong>.
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-              <a class="list-group-item px-0" href="#!">
-
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Ab Hadley</strong> reacted to your post with a 😍
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-              <a class="list-group-item px-0" href="#!">
-
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Adolfo Hess</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-              <a class="list-group-item px-0" href="#!">
-
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Daniela Dewitt</strong> subscribed to you.
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-              <a class="list-group-item px-0" href="#!">
-
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Miyah Myles</strong> shared your post with <strong class="text-body">Ryu Duke</strong>, <strong class="text-body">Glen Rouse</strong>, and <strong class="text-body">3 others</strong>.
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-              <a class="list-group-item px-0" href="#!">
-
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Ryu Duke</strong> reacted to your post with a 😍
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-              <a class="list-group-item px-0" href="#!">
-
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Glen Rouse</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-              <a class="list-group-item px-0" href="#!">
-
-                <div class="row">
-                  <div class="col-auto">
-                
-                    <!-- Avatar -->
-                    <div class="avatar avatar-sm">
-                      <img src="assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
-                    </div>
-
-                  </div>
-                  <div class="col ml-n2">
-                
-                    <!-- Content -->
-                    <div class="small text-muted">
-                      <strong class="text-body">Grace Gross</strong> subscribed to you.
-                    </div>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <small class="text-muted">
-                      2m
-                    </small>
-                
-                  </div>
-                </div> <!-- / .row -->
-
-              </a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- NAVIGATION
-    ================================================== -->
-      <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-dark bg-vibrant" id="sidebar">
-
-          <div class="container-fluid">
-
-            <!-- Toggler -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <!-- Brand -->
-            <a class="navbar-brand" href="index.html">
-              <img src="assets/img/logo.svg" class="navbar-brand-img 
-              mx-auto" alt="...">
-            </a>
-  
-            <!-- User (xs) -->
-            <div class="navbar-user d-md-none">
-  
-              <!-- Dropdown -->
-              <div class="dropdown">
-          
-                <!-- Toggle -->
-                <a href="#" id="sidebarIcon" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <div class="avatar avatar-sm avatar-online">
-                    <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                  </div>
-                </a>
-  
-                <!-- Menu -->
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="sidebarIcon">
-                  <a href="profile-posts.html" class="dropdown-item">Profile</a>
-                  <a href="settings.html" class="dropdown-item">Settings</a>
-                  <hr class="dropdown-divider">
-                  <a href="sign-in.html" class="dropdown-item">Logout</a>
-                </div>
-  
-              </div>
-  
-            </div>
-  
-            <!-- Collapse -->
-            <div class="collapse navbar-collapse" id="sidebarCollapse">
-  
-              <!-- Form -->
-              <form class="mt-4 mb-3 d-md-none">
-                <div class="input-group input-group-rounded input-group-merge">
-                  <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <span class="fe fe-search"></span>
-                    </div>
-                  </div>
-                </div>
-              </form>
-        
-              <div class="scrollbar-inner">
-                <!-- Navigation -->
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">
-                    <i class="fe fe-home"></i>Homepage
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#sidebarPages" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPages">
-                    <i class="fe fe-file"></i> Products
-                  </a>
-                  <div class="collapse " id="sidebarPages">
-                    <ul class="nav nav-sm flex-column">
-                      <!--<li class="nav-item">
-                        <a href="#sidebarProfile" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProfile">
-                          Blink
+                </form>
+				
+				<ul class="top-nav">
+                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+					
+					<li data-toggle="tooltip" data-original-title="Time logged in" class=" top-nav__notifications p-0 m-0">
+                        <a href="#" data-toggle="dropdown"  class="top-nav__notify min-width-15px" >
+                            <i class="zmdi zmdi-time"></i>
                         </a>
-                        <div class="collapse " id="sidebarProfile">
-                          <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                              <a href="profile-posts.html" class="nav-link ">
-                                Posts
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="profile-groups.html" class="nav-link ">
-                                Groups
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="profile-projects.html" class="nav-link ">
-                                Projects
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="profile-files.html" class="nav-link ">
-                                Files
-                              </a>
-                            </li>
-                              <li class="nav-item">
-                              <a href="profile-subscribers.html" class="nav-link ">
-                                Subscribers
-                              </a>
-                            </li>
-                          </ul>
-                        </div> 
-                      </li> -->
-                      <li class="nav-item">
-                        <a href="add-product.html" class="nav-link ">
-                          Add Product
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="products.html" class="nav-link ">
-                          List of Products
-                        </a>
-                      </li>
-                      <!-- <li class="nav-item">
-                        <a href="#sidebarProject" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarProject">
-                          Project
-                        </a>
-                        <div class="collapse " id="sidebarProject">
-                          <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                              <a href="project-overview.html" class="nav-link ">
-                                Overview
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="project-files.html" class="nav-link ">
-                                Files
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="project-reports.html" class="nav-link ">
-                                Reports
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="project-new.html" class="nav-link ">
-                                New project
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#sidebarTeam" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarTeam">
-                          Team
-                        </a>
-                        <div class="collapse " id="sidebarTeam">
-                          <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                              <a href="team-overview.html" class="nav-link ">
-                                Overview
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="team-projects.html" class="nav-link ">
-                                Projects
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="team-members.html" class="nav-link ">
-                                Members
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="team-new.html" class="nav-link ">
-                                New team
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a href="orders.html" class="nav-link ">
-                          Orders
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="feed.html" class="nav-link ">
-                          Feed
-                        </a>
-                      </li> -->
-                      <!-- <li class="nav-item">
-                        <a href="invoice.html" class="nav-link ">
-                          Invoice
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="pricing.html" class="nav-link ">
-                          Pricing
-                        </a>
-                      </li> -->
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#sidebarAuth" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth">
-                    <i class="fe fe-user"></i> Authentication
-                  </a>
-                  <div class="collapse" id="sidebarAuth">
-                    <ul class="nav nav-sm flex-column">
-                      <li class="nav-item">
-                        <a href="#sidebarSignIn" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignIn">
-                          Sign in
-                        </a>
-                        <div class="collapse" id="sidebarSignIn">
-                          <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                              <a href="sign-in-cover.html" class="nav-link">
-                                Cover
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="sign-in-illustration.html" class="nav-link">
-                                Illustration
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="sign-in.html" class="nav-link">
-                                Basic
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#sidebarSignUp" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignUp">
-                          Sign up
-                        </a>
-                        <div class="collapse" id="sidebarSignUp">
-                          <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                              <a href="sign-up-cover.html" class="nav-link">
-                                Cover
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="sign-up-illustration.html" class="nav-link">
-                                Illustration
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="sign-up.html" class="nav-link">
-                                Basic
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#sidebarPassword" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPassword">
-                          Password reset
-                        </a>
-                        <div class="collapse" id="sidebarPassword">
-                          <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                              <a href="password-reset-cover.html" class="nav-link">
-                                Cover
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="password-reset-illustration.html" class="nav-link">
-                                Illustration
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="password-reset.html" class="nav-link">
-                                Basic
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#sidebarError" class="nav-link" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarError">
-                          Error
-                        </a>
-                        <div class="collapse" id="sidebarError">
-                          <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                              <a href="error-illustration.html" class="nav-link">
-                                Illustration
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                              <a href="error.html" class="nav-link">
-                                Basic
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item d-md-none">
-                  <a class="nav-link" href="#sidebarModalActivity" data-toggle="modal">
-                   <span class="fe fe-bell"></span> Notifications
-                  </a>
-                </li>
-              </ul>
-  
-              <!-- Divider -->
-              <hr class="navbar-divider my-3">
-  
-              <!-- Heading -->
-              <h6 class="navbar-heading">
-                Documentation
-              </h6>
-  
-              <!-- Navigation -->
-              <ul class="navbar-nav mb-md-4">
-                <li class="nav-item">
-                  <a class="nav-link " href="create-invoice.html">
-                    <i class="fe fe-clipboard"></i> Create an Invoice
-                  </a>
-                </li>
-  
-                <li class="nav-item dropdown d-none">
-                  <a class="nav-link" href="#invoicesSider" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents">
-                    <i class="fe fe-book-open"></i> Invoices
-                  </a>
-                  <div class="collapse " id="invoicesSider">
-                    <ul class="nav nav-sm flex-column">
-                      <li class="nav-item">
-                        <a href="create-invoice.html" class="nav-link">
-                          Create an Invoice
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                         Invoices
-                        </a>
-                      </li>
-                      
-                      
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#sliderSetUp" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents">
-                    <i class="fe fe-settings"></i> Set Ups
-                  </a>
-                  <div class="collapse " id="sliderSetUp">
-                    <ul class="nav nav-sm flex-column">
-                      <li class="nav-item">
-                        <a href="new-debtor.html" class="nav-link">
-                         Add Debtor
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="new-creditor.html" class="nav-link">
-                         Add Creditor
-                        </a>
-                      </li>
-                   
-                      
-                    </ul>
-                  </div>
-                </li>
-                
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#sidebarComponents" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents">
-                    <i class="fe fe-book-open"></i> Reports
-                  </a>
-                  <div class="collapse " id="sidebarComponents">
-                    <ul class="nav nav-sm flex-column">
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          Debtors
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          Creditors
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          Pending Credit
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          Pending Debts
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                          Age analysis
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="all-invoices.html" class="nav-link">
-                          All Invoices
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="pending-invoices.html" class="nav-link">
-                          Pending Invoices
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="paid-invoices.html" class="nav-link">
-                          Paid Invoices
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#myAccountSider" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarComponents">
-                    <i class="fe fe-user"></i> My Profile
-                  </a>
-                  <div class="collapse " id="myAccountSider">
-                    <ul class="nav nav-sm flex-column">
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                         My Profile
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                         My Logs
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="settings.html" class="nav-link ">
-                          Settings
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link">
-                        Logout
-                        </a>
-                      </li>
-                      
-                      
-                    </ul>
-                  </div>
-                  
-                </li>
-                <li class="nav-item">
-                  <a href="sign-in-illustration.html" class="nav-link">
-                    <i class="fe fe-log-out"></i>Logout
-                  </a>
-
-                </li>
-
-              </ul>
-        
-              <!-- Push content down -->
-              <div class="mt-auto"></div>
-        
-              
-              <!-- Customize -->
-              <!-- <a href="#modalDemo" class="btn btn-block btn-primary mb-4" data-toggle="modal">
-                <i class="fe fe-sliders mr-2"></i> Customize
-              </a> -->
-              
-        
-              
-              <!-- User (md) -->
-              <div class="navbar-user d-non d-md-flex" id="sidebarUser">
-          
-                <!-- Icon -->
-                <a href="#sidebarModalActivity" class="navbar-user-link" data-toggle="modal">
-                  <span class="icon">
-                    <i class="fe fe-bell"></i>
-                  </span>
-                </a>
-  
-                <!-- Dropup -->
-                <div class="dropup">
-            
-                  <!-- Toggle -->
-                  <a href="#" id="sidebarIconCopy" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="avatar avatar-sm avatar-online">
-                      <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                    </div>
-                  </a>
-  
-                  <!-- Menu -->
-                  <div class="dropdown-menu" aria-labelledby="sidebarIconCopy">
-                    <a href="profile-posts.html" class="dropdown-item">Profile</a>
-                    <a href="settings.html" class="dropdown-item">Settings</a>
-                    <hr class="dropdown-divider">
-                    <a href="sign-in.html" class="dropdown-item">Logout</a>
-                  </div>
-  
-                </div>
-  
-                <!-- Icon -->
-                <a href="#sidebarModalSearch" class="navbar-user-link" data-toggle="modal">
-                  <span class="icon">
-                    <i class="fe fe-search"></i>
-                  </span>
-                </a>
-  
-              </div>
-              </div>
-              
-  
-            </div> 
-            <!-- / .navbar-collapse -->
-  
-          </div>
-
-      </nav>
-    
-    
-      <nav class="navbar navbar-expand-md navbar-light d-none d-md-flex" id="topnav">
-        <div class="container">
-
-          <!-- Toggler -->
-          <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Brand -->
-          <a class="navbar-brand mr-auto" href="index.html">
-            <img src="assets/img/logo.svg" alt="..." class="navbar-brand-img">
-          </a>
-
-          <!-- Form -->
-          <form class="form-inline mr-4 d-none d-lg-flex">
-            <div class="input-group input-group-rounded input-group-merge" data-toggle="lists" data-lists-values='["name"]'>
-
-              <!-- Input -->
-              <input type="search" class="form-control form-control-prepended  dropdown-toggle search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
-              <div class="input-group-prepend">
-                <div class="input-group-text">
-                  <i class="fe fe-search"></i>
-                </div>
-              </div>
-
-              <!-- Menu -->
-              <div class="dropdown-menu dropdown-menu-card">
-                <div class="card-body">
-
-                  <!-- List group -->
-                  <div class="list-group list-group-flush list my-n3">
-                    <a href="team-overview.html" class="list-group-item px-0">
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar">
-                            <img src="assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Title -->
-                          <h4 class="text-body mb-1 name">
-                            Airbnb
-                          </h4>
-
-                          <!-- Time -->
-                          <p class="small text-muted mb-0">
-                            <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-                          </p>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-                    </a>
-                    <a href="team-overview.html" class="list-group-item px-0">
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar">
-                            <img src="assets/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Title -->
-                          <h4 class="text-body mb-1 name">
-                            Medium Corporation
-                          </h4>
-
-                          <!-- Time -->
-                          <p class="small text-muted mb-0">
-                            <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-                          </p>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-                    </a>
-                    <a href="project-overview.html" class="list-group-item px-0">
-
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-4by3">
-                            <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Title -->
-                          <h4 class="text-body mb-1 name">
-                            Homepage Redesign
-                          </h4>
-
-                          <!-- Time -->
-                          <p class="small text-muted mb-0">
-                            <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                          </p>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a href="project-overview.html" class="list-group-item px-0">
-
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-4by3">
-                            <img src="assets/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Title -->
-                          <h4 class="text-body mb-1 name">
-                            Travels & Time
-                          </h4>
-
-                          <!-- Time -->
-                          <p class="small text-muted mb-0">
-                            <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                          </p>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a href="project-overview.html" class="list-group-item px-0">
-
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-4by3">
-                            <img src="assets/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-
-                          <!-- Title -->
-                          <h4 class="text-body mb-1 name">
-                            Safari Exploration
-                          </h4>
-
-                          <!-- Time -->
-                          <p class="small text-muted mb-0">
-                            <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                          </p>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-              
-                    </a>
-                    <a href="profile-posts.html" class="list-group-item px-0">
-              
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Title -->
-                          <h4 class="text-body mb-1 name">
-                            Dianna Smiley
-                          </h4>
-
-                          <!-- Status -->
-                          <p class="text-body small mb-0">
-                            <span class="text-success">●</span> Online
-                          </p>
-
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a href="profile-posts.html" class="list-group-item px-0">
-
-                      <div class="row align-items-center">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Title -->
-                          <h4 class="text-body mb-1 name">
-                            Ab Hadley
-                          </h4>
-
-                          <!-- Status -->
-                          <p class="text-body small mb-0">
-                            <span class="text-danger">●</span> Offline
-                          </p>
-
-                        </div>
-                      </div> <!-- / .row -->
-              
-                    </a>
-                  </div>
-          
-                </div>
-              </div> <!-- / .dropdown-menu -->
-
-            </div>
-          </form>
-
-          <!-- User -->
-          <div class="navbar-user">
-      
-            <!-- Dropdown -->
-            <div class="dropdown mr-4 d-none d-lg-flex">
-        
-              <!-- Toggle -->
-              <a href="#" class="text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="icon active">
-                  <i class="fe fe-bell"></i>
-                </span>
-              </a>
-
-              <!-- Menu -->
-              <div class="dropdown-menu dropdown-menu-right dropdown-menu-card">
-                <div class="card-header">
-                  <div class="row align-items-center">
-                    <div class="col">
-                
-                      <!-- Title -->
-                      <h5 class="card-header-title">
-                        Notifications
-                      </h5>
-
-                    </div>
-                    <div class="col-auto">
-                
-                      <!-- Link -->
-                      <a href="#!" class="small">
-                        View all
-                      </a>
-
-                    </div>
-                  </div> <!-- / .row -->
-                </div> <!-- / .card-header -->
-                <div class="card-body">
-
-                  <!-- List group -->
-                  <div class="list-group list-group-flush my-n3">
-                    <a class="list-group-item px-0" href="#!">
-              
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Dianna Smiley</strong> shared your post with <strong class="text-body">Ab Hadley</strong>, <strong class="text-body">Adolfo Hess</strong>, and <strong class="text-body">3 others</strong>.
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a class="list-group-item px-0" href="#!">
-
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Ab Hadley</strong> reacted to your post with a 😍
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a class="list-group-item px-0" href="#!">
-
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Adolfo Hess</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a class="list-group-item px-0" href="#!">
-
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Daniela Dewitt</strong> subscribed to you.
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a class="list-group-item px-0" href="#!">
-
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Miyah Myles</strong> shared your post with <strong class="text-body">Ryu Duke</strong>, <strong class="text-body">Glen Rouse</strong>, and <strong class="text-body">3 others</strong>.
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a class="list-group-item px-0" href="#!">
-
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Ryu Duke</strong> reacted to your post with a 😍
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a class="list-group-item px-0" href="#!">
-
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Glen Rouse</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                    <a class="list-group-item px-0" href="#!">
-
-                      <div class="row">
-                        <div class="col-auto">
-                    
-                          <!-- Avatar -->
-                          <div class="avatar avatar-sm">
-                            <img src="assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
-                          </div>
-
-                        </div>
-                        <div class="col ml-n2">
-                    
-                          <!-- Content -->
-                          <div class="small text-muted">
-                            <strong class="text-body">Grace Gross</strong> subscribed to you.
-                          </div>
-
-                        </div>
-                        <div class="col-auto">
-
-                          <small class="text-muted">
-                            2m
-                          </small>
-                    
-                        </div>
-                      </div> <!-- / .row -->
-
-                    </a>
-                  </div>
-            
-                </div>
-              </div> <!-- / .dropdown-menu -->
-
-            </div>
-
-            <!-- Dropdown -->
-            <div class="dropdown">
-        
-              <!-- Toggle -->
-              <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-              </a>
-
-              <!-- Menu -->
-              <div class="dropdown-menu dropdown-menu-right">
-                <a href="profile-posts.html" class="dropdown-item">Profile</a>
-                <a href="settings.html" class="dropdown-item">Settings</a>
-                <hr class="dropdown-divider">
-                <a href="sign-in.html" class="dropdown-item">Logout</a>
-              </div>
-
-            </div>
-
-          </div>
-
-          <!-- Collapse -->
-          <div class="collapse navbar-collapse mr-auto order-lg-first" id="navbar">
-
-            <!-- Form -->
-            <form class="mt-4 mb-3 d-md-none">
-              <input type="search" class="form-control form-control-rounded" placeholder="Search" aria-label="Search">
-            </form>
-
-            <!-- Navigation -->
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" id="topnavDashboards" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dashboards
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="topnavDashboards">
-                  <li>
-                    <a class="dropdown-item " href="index.html">
-                      Default
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item active" href="dashboard-alt.html">
-                      Alternative
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " href="#" id="topnavPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Pages
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="topnavPages">
-                  <li class="dropright">
-                    <a class="dropdown-item dropdown-toggle " href="#" id="topnavProfile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Profile
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="topnavProfile">
-                      <a class="dropdown-item " href="profile-posts.html">
-                        Posts
-                      </a>
-                      <a class="dropdown-item " href="profile-groups.html">
-                        Groups
-                      </a>
-                      <a class="dropdown-item " href="profile-projects.html">
-                        Projects
-                      </a>
-                      <a class="dropdown-item " href="profile-files.html">
-                        Files
-                      </a>
-                      <a class="dropdown-item " href="profile-subscribers.html">
-                        Subscribers
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropright">
-                    <a class="dropdown-item dropdown-toggle " href="#" id="topnavProject" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Project
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="topnavProject">
-                      <a class="dropdown-item " href="project-overview.html">
-                        Overview
-                      </a>
-                      <a class="dropdown-item " href="project-files.html">
-                        Files
-                      </a>
-                      <a class="dropdown-item " href="project-reports.html">
-                        Reports
-                      </a>
-                      <a class="dropdown-item " href="project-new.html">
-                        New project
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropright">
-                    <a class="dropdown-item dropdown-toggle " href="#" id="topnavTeam" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Team
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="topnavTeam">
-                      <a class="dropdown-item " href="team-overview.html">
-                        Overview
-                      </a>
-                      <a class="dropdown-item " href="team-projects.html">
-                        Projects
-                      </a>
-                      <a class="dropdown-item " href="team-members.html">
-                        Members
-                      </a>
-                      <a class="dropdown-item " href="team-new.html">
-                        New team
-                      </a>
-                    </div>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="orders.html">
-                      Orders
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="feed.html">
-                      Feed
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="settings.html">
-                      Settings
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="invoice.html">
-                      Invoice
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="pricing.html">
-                      Pricing
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="topnavAuth" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Auth
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="topnavAuth">
-                  <li class="dropleft">
-                    <a class="dropdown-item dropdown-toggle" href="#" id="topnavSignIn" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Sign in
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="topnavSignIn">
-                      <a class="dropdown-item" href="sign-in-cover.html">
-                        Cover
-                      </a>
-                      <a class="dropdown-item" href="sign-in-illustration.html">
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="sign-in-basics.html">
-                        Basic
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropright">
-                    <a class="dropdown-item dropdown-toggle" href="#" id="topnavSignUp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Sign up
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="topnavSignUp">
-                      <a class="dropdown-item" href="sign-up-cover.html">
-                        Cover
-                      </a>
-                      <a class="dropdown-item" href="sign-up-illustration.html">
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="sign-up.html">
-                        Basic
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropright">
-                    <a class="dropdown-item dropdown-toggle" href="#" id="topnavPassword" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Password reset
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="topnavPassword">
-                      <a class="dropdown-item" href="password-reset-cover.html">
-                        Cover
-                      </a>
-                      <a class="dropdown-item" href="password-reset-illustration.html">
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="password-reset.html">
-                        Basic
-                      </a>
-                    </div>
-                  </li>
-                  <li class="dropright">
-                    <a class="dropdown-item dropdown-toggle" href="#" id="topnavError" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Error
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="topnavError">
-                      <a class="dropdown-item" href="error-illustration.html">
-                        Illustration
-                      </a>
-                      <a class="dropdown-item" href="error.html">
-                        Basic
-                      </a>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " href="#" id="topnavDocumentation" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Docs
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="topnavDocumentation">
-                  <li>
-                    <a class="dropdown-item " href="getting-started.html">
-                      Getting started
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="components.html">
-                      Components
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item " href="changelog.html">
-                      Changelog
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#modalDemo" data-toggle="modal">
-                  Customize
-                </a>
-              </li>
-            </ul>
-
-          </div>
-
-        </div> <!-- / .container -->
-      </nav>
-    
-
-    <!-- MAIN CONTENT
-    ================================================== -->
-    <div class="main-content">
-
-      
-        <nav class="navbar navbar-expand-md navbar-light d-none d-md-flex" id="topbar">
-          <div class="container-fluid">
-
-            <!-- Form -->
-            <form class="form-inline mr-4 d-none d-md-flex">
-              <div class="input-group input-group-flush input-group-merge" data-toggle="lists" data-lists-values='["name"]'>
-
-                <!-- Input -->
-                <input type="search" class="form-control form-control-prepended dropdown-toggle search" data-toggle="dropdown" placeholder="Search" aria-label="Search">
-                <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <i class="fe fe-search"></i>
-                  </div>
-                </div>
-
-                <!-- Menu -->
-                <div class="dropdown-menu dropdown-menu-card">
-                  <div class="card-body">
-
-                    <!-- List group -->
-                    <div class="list-group list-group-flush list my-n3">
-                      <a href="team-overview.html" class="list-group-item px-0">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar">
-                              <img src="assets/img/avatars/teams/team-logo-1.jpg" alt="..." class="avatar-img rounded">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-
-                            <!-- Title -->
-                            <h4 class="text-body mb-1 name">
-                              Airbnb
-                            </h4>
-
-                            <!-- Time -->
-                            <p class="small text-muted mb-0">
-                              <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-                            </p>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-                      </a>
-                      <a href="team-overview.html" class="list-group-item px-0">
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar">
-                              <img src="assets/img/avatars/teams/team-logo-2.jpg" alt="..." class="avatar-img rounded">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-
-                            <!-- Title -->
-                            <h4 class="text-body mb-1 name">
-                              Medium Corporation
-                            </h4>
-
-                            <!-- Time -->
-                            <p class="small text-muted mb-0">
-                              <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 2hr ago</time>
-                            </p>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-                      </a>
-                      <a href="project-overview.html" class="list-group-item px-0">
-
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-4by3">
-                              <img src="assets/img/avatars/projects/project-1.jpg" alt="..." class="avatar-img rounded">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-
-                            <!-- Title -->
-                            <h4 class="text-body mb-1 name">
-                              Homepage Redesign
-                            </h4>
-
-                            <!-- Time -->
-                            <p class="small text-muted mb-0">
-                              <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                            </p>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a href="project-overview.html" class="list-group-item px-0">
-
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-4by3">
-                              <img src="assets/img/avatars/projects/project-2.jpg" alt="..." class="avatar-img rounded">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-
-                            <!-- Title -->
-                            <h4 class="text-body mb-1 name">
-                              Travels & Time
-                            </h4>
-
-                            <!-- Time -->
-                            <p class="small text-muted mb-0">
-                              <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                            </p>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a href="project-overview.html" class="list-group-item px-0">
-
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-4by3">
-                              <img src="assets/img/avatars/projects/project-3.jpg" alt="..." class="avatar-img rounded">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-
-                            <!-- Title -->
-                            <h4 class="text-body mb-1 name">
-                              Safari Exploration
-                            </h4>
-
-                            <!-- Time -->
-                            <p class="small text-muted mb-0">
-                              <span class="fe fe-clock"></span> <time datetime="2018-05-24">Updated 4hr ago</time>
-                            </p>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-              
-                      </a>
-                      <a href="profile-posts.html" class="list-group-item px-0">
-              
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar">
-                              <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Title -->
-                            <h4 class="text-body mb-1 name">
-                              Dianna Smiley
-                            </h4>
-
-                            <!-- Status -->
-                            <p class="text-body small mb-0">
-                              <span class="text-success">●</span> Online
-                            </p>
-
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a href="profile-posts.html" class="list-group-item px-0">
-
-                        <div class="row align-items-center">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar">
-                              <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Title -->
-                            <h4 class="text-body mb-1 name">
-                              Ab Hadley
-                            </h4>
-
-                            <!-- Status -->
-                            <p class="text-body small mb-0">
-                              <span class="text-danger">●</span> Offline
-                            </p>
-
-                          </div>
-                        </div> <!-- / .row -->
-              
-                      </a>
-                    </div>
-          
-                  </div>
-                </div> <!-- / .dropdown-menu -->
-
-              </div>
-            </form>
-
-            <!-- User -->
-            <div class="navbar-user">
-      
-              <!-- Dropdown -->
-              <div class="dropdown mr-4 d-none d-md-flex">
-        
-                <!-- Toggle -->
-                <a href="#" class="text-muted" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="icon active">
-                    <i class="fe fe-bell"></i>
-                  </span>
-                </a>
-
-                <!-- Menu -->
-                <div class="dropdown-menu dropdown-menu-right dropdown-menu-card">
-                  <div class="card-header">
-                    <div class="row align-items-center">
-                      <div class="col">
-                
-                        <!-- Title -->
-                        <h5 class="card-header-title">
-                          Notifications
-                        </h5>
-
-                      </div>
-                      <div class="col-auto">
-                
-                        <!-- Link -->
-                        <a href="#!" class="small">
-                          View all
-                        </a>
-
-                      </div>
-                    </div> <!-- / .row -->
-                  </div> <!-- / .card-header -->
-                  <div class="card-body">
-
-                    <!-- List group -->
-                    <div class="list-group list-group-flush my-n3">
-                      <a class="list-group-item px-0" href="#!">
-              
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Dianna Smiley</strong> shared your post with <strong class="text-body">Ab Hadley</strong>, <strong class="text-body">Adolfo Hess</strong>, and <strong class="text-body">3 others</strong>.
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a class="list-group-item px-0" href="#!">
-
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Ab Hadley</strong> reacted to your post with a 😍
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a class="list-group-item px-0" href="#!">
-
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-3.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Adolfo Hess</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a class="list-group-item px-0" href="#!">
-
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-4.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Daniela Dewitt</strong> subscribed to you.
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a class="list-group-item px-0" href="#!">
-
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-5.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Miyah Myles</strong> shared your post with <strong class="text-body">Ryu Duke</strong>, <strong class="text-body">Glen Rouse</strong>, and <strong class="text-body">3 others</strong>.
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a class="list-group-item px-0" href="#!">
-
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-6.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Ryu Duke</strong> reacted to your post with a 😍
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a class="list-group-item px-0" href="#!">
-
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-7.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Glen Rouse</strong> commented <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...” </blockquote>
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                      <a class="list-group-item px-0" href="#!">
-
-                        <div class="row">
-                          <div class="col-auto">
-                    
-                            <!-- Avatar -->
-                            <div class="avatar avatar-sm">
-                              <img src="assets/img/avatars/profiles/avatar-8.jpg" alt="..." class="avatar-img rounded-circle">
-                            </div>
-
-                          </div>
-                          <div class="col ml-n2">
-                    
-                            <!-- Content -->
-                            <div class="small text-muted">
-                              <strong class="text-body">Grace Gross</strong> subscribed to you.
-                            </div>
-
-                          </div>
-                          <div class="col-auto">
-
-                            <small class="text-muted">
-                              2m
-                            </small>
-                    
-                          </div>
-                        </div> <!-- / .row -->
-
-                      </a>
-                    </div>
-            
-                  </div>
-                </div> <!-- / .dropdown-menu -->
-
-              </div>
-
-              <!-- Dropdown -->
-              <div class="dropdown">
-        
-                <!-- Toggle -->
-                <a href="#" class="avatar avatar-sm avatar-online dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <img src="assets/img/avatars/profiles/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
-                </a>
-
-                <!-- Menu -->
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a href="profile-posts.html" class="dropdown-item">Profile</a>
-                  <a href="settings.html" class="dropdown-item">Settings</a>
-                  <hr class="dropdown-divider">
-                  <a href="sign-in.html" class="dropdown-item">Logout</a>
-                </div>
-
-              </div>
-
-            </div>
-  
-          </div>
-        </nav>
-      
-
-      <!-- HEADER -->
-      
-      <div class="header">
-        <div class="container-fluid">
-
-          <!-- Body -->
-          <div class="header-body">
-            <div class="row align-items-end">
-              <div class="col">
-                
-                <!-- Pretitle -->
-                <h6 class="header-pretitle">
-                  Overview
-                </h6>
-
-                <!-- Title -->
-                <h1 class="header-title">
-                  Dashboard
-                </h1>
-
-              </div>
-              <div class="col-auto">
-                
-                <!-- Button -->
-                <a href="create-invoice.html" class="btn btn-primary">
-                 Create Invoice
-                </a>
-
-              </div>
-            </div> <!-- / .row -->
-          </div> <!-- / .header-body -->
-
-        </div>
-      </div>
-       <!-- / .header -->
-      
-      <!-- CARDS -->
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 col-lg-6 col-xl">
-            
-            <!-- Card -->
-            <div class="card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col">
-
-                    <!-- Title -->
-                    <h6 class="card-title text-uppercase text-muted mb-2">
-                      Pending debts
-                    </h6>
-                    
-                    <!-- Heading -->
-                    <span class="h2 mb-0">
-                     KES 102,203
-                    </span>
-
-                    <!-- Badge -->
-                    <span class="badge badge-soft-danger mt-n1">
-                      32 Debtors
-                    </span>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Icon -->
-                    <span class="h2 fe fe-dollar-sign text-muted mb-0"></span>
-
-                  </div>
-                </div> <!-- / .row -->
-
-              </div>
-            </div>
-
-          </div>
-          <div class="col-12 col-lg-6 col-xl">
-            
-            <!-- Card -->
-            <div class="card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col">
-
-                    <!-- Title -->
-                    <h6 class="card-title text-uppercase text-muted mb-2">
-                      Pending Income
-                    </h6>
-                    
-                    <!-- Heading -->
-                    <span class="h2 mb-0">
-                      KES 120,000
-                    </span>
-
-                     <!-- Badge -->
-                     <span class="badge badge-soft-success mt-n1">
-                      32 Creditors
-                    </span>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Icon -->
-                    <span class="h2 fe fe-briefcase text-muted mb-0"></span>
-
-                  </div>
-                </div> <!-- / .row -->
-
-              </div>
-            </div>
-              
-          </div>
-          <div class="col-12 col-lg-6 col-xl">
-            
-            <!-- Card -->
-            <div class="card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col">
-
-                    <!-- Title -->
-                    <h6 class="card-title text-uppercase text-muted mb-2">
-                      Received Invoices
-                    </h6>
-
-                    <span class="mb-0">
-                      32 Received Invoices
-                    </span>
-
-                    <div class="row align-items-center no-gutters">
-                      <div class="col-auto">
-
-                        <!-- Heading -->
-                        <small class="mr-2 mb-0">
-                         <strong> 84.5% Paid</strong>
-                        </small>
                         
-                      </div>
-                      <div class="col">
-                        
-                        <!-- Progress -->
-                        <div class="progress progress-sm">
-                          <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+					</li>
+					
+					<li data-toggle="tooltip" data-original-title="Time logged in " class="">
+                        <a href="#" data-toggle="dropdown"  class="" >
+                            3 min
+                        </a>
+                       
+					</li>
+					
+                    <li class="ml-5" >
+                        <a href="new-parent.html" data-toggle="tooltip" data-original-title="Tasks completed" >
+                            <i class="flaticon-pulse"></i><span class="mx-3">22</span>
+                        </a>
+                    </li>
+                </ul>
+
+                
+            </header>
+
+             <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                           <div class="avatar-char mr-3 font-weight-bold">JM</div>
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
                         </div>
 
-                      </div>
-                    </div> <!-- / .row -->
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Icon -->
-                    <span class="h2 fe fe-clipboard text-muted mb-0"></span>
-
-                  </div>
-                </div> <!-- / .row -->
-
-              </div>
-            </div>
-              
-          </div>
-          <div class="col-12 col-lg-6 col-xl">
-            
-            <!-- Card -->
-            <div class="card">
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col">
-
-                    <!-- Title -->
-                    <h6 class="card-title text-uppercase text-muted mb-2">
-                      Effective Hourly
-                    </h6>
-                    
-                    <!-- Heading -->
-                    <span class="h2 mb-0">
-                      $85.50
-                    </span>
-
-                  </div>
-                  <div class="col-auto">
-                    
-                    <!-- Icon -->
-                    <span class="h2 fe fe-clock text-muted mb-0"></span>
-
-                  </div>
-                </div> <!-- / .row -->
-
-              </div>
-            </div>
-              
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-12 col-xl-8">
-            
-            <!-- Orders -->
-            <div class="card">
-              <div class="card-header">
-                <div class="row align-items-center">
-                  <div class="col">
-                
-                    <!-- Title -->
-                    <h4 class="card-header-title">
-                      Transactions Summary
-                    </h4>
-
-                  </div>
-                  <div class="col-auto mr-n3 d-none">
-                    
-                    <!-- Caption -->
-                    <span class="text-muted">
-                      Show affiliate:
-                    </span>
-
-                  </div>
-                  <div class="col-auto d-none">
-
-                    <!-- Switch -->
-                    <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="cardToggle" data-toggle="chart" data-target="#ordersChart" data-add='{"data":{"datasets":[{"data":[15,10,20,12,7,0,8,16,18,16,10,22],"backgroundColor":"#d2ddec","label":"Affiliate"}]}}'>
-                      <label class="custom-control-label" for="cardToggle"></label>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
+                        </div>
                     </div>
 
-                  </div>
-
-                  <div class="col-auto">
-
-                    <!-- Tabs -->
-                    <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item">
-                        <a href="#" title="Show all transactions" class="nav-link active all-transactions" data-toggle="tab">
-                          All
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" title="Show money received" class="nav-link credited-transactions" data-toggle="tab">
-                          Credited
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="#" title="Show Debts paid" class="nav-link debited-transactions" data-toggle="tab">
-                          Debited
-                        </a>
-                      </li>
+                    <ul class="navigation">
+						<li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart" title="Human resource dashboard"></i>HR Dashboard</a></li>
+						
+						<li class="navigation__active" title="Sacco Benki system users"><a href="systemuser.html"><i class="pe-7s-display1" ></i>System Users</a></li>
+						<li class="navigation__active" title="have a look at the departments" ><a href="departments.html"><i class="pe-7s-portfolio" ></i>Departments</a></li>
+						<li class="navigation__active" title="Employees"><a href="employees.html"><i class="pe-7s-id"></i>Employees</a></li>
+						<li class="navigation__active" title="Check the payrolls"><a href="payroll.html"><i class="flaticon-invoice" ></i>Payroll</a></li>
+						<li class="navigation__active" title="Employee leaves"><a href="leave.html"><i class="pe-7s-back"></i>Leave</a></li>
+						<li class="navigation__active" title="Have a look at some reports"><a href="reports.html"><i class="pe-7s-note2" ></i>Reports</a></li>
+						
                     </ul>
-
-                  </div>
-                </div> <!-- / .row -->
-
-              </div>
-              <div class="card-body">                
-                <!-- Chart -->
-                  <div class="chart">
-                    <div id="revenue-by-bank" class="highChartStyles" style="height: 300px; "></div>
-                    <div id="revenue-by-bank-debited" class="highChartStyles d-none" style="height: 300px; "></div>
-                    <div id="revenue-by-bank-credited" class="highChartStyles d-none" style="height: 300px; "></div>
-
-                  </div>
-                <!-- <div class="chart">
-                  <canvas id="transaction-data" class="chart-canvas"></canvas>
-                </div> -->
-              </div>
-            </div>
-
-          </div>
-          <div class="col-12 col-xl-4">
-
-            <!-- Devices -->
-            <div class="card">
-              <div class="card-header">
-                <div class="row align-items-center">
-                  <div class="col">
-                
-                    <!-- Title -->
-                    <h4 class="card-header-title">
-                     Unpaid Invoice
-                    </h4>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <!-- Tabs -->
-                    <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[60,25,15]}]}}'>
-                        <a href="#" class="nav-link active" data-toggle="tab">
-                          All
-                        </a>
-                      </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
-                        <a href="#" title="Invoices for us to be paid" class="nav-link" data-toggle="tab">
-                          Credit
-                        </a>
-                      </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#devicesChart" data-update='{"data":{"datasets":[{"data":[15,45,20]}]}}'>
-                        <a href="#" title="Invoices for us to pay" class="nav-link" data-toggle="tab">
-                          Debt
-                        </a>
-                      </li>
-                    </ul>
-
-                  </div>
-                </div> <!-- / .row -->
-
-              </div>
-              <div class="card-body">
-                
-                <!-- Chart -->
-                <div class="chart chart-appended">
-                  <canvas id="devicesChart" class="chart-canvas" data-target="#devicesChartLegend"></canvas>
                 </div>
+            </aside>
+			
+			<div class="content--full map-main-container d-none">
+					<div class="col-12">
+						<header class="content__title px-0 border-0">
+				 	<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">Biller Dashboard</h1>
+							</span>
+							<div class="">
+								<ol class="breadcrumb border-0">
+									<li class="breadcrumb-item">Home</li>
+									<li class="breadcrumb-item active">Dashboard</li>
+								
+								</ol>
+								
+							</div>
+						</div>
+					</div>
+				</header>
+					</div>
+					<div class="pb-4">
+						<div class="col-12">
+							<h4 class="text-white text-light d-none">Revenue Collection By Subcounty</h4>
+							<div id="the-map-container">
+							</div>
+<!--							control buttons-->
+							<div class="row map-buttons d-flex">
+									<span class="map-date p-3 text-white ml-3">30 Jun 2020</span>
+								<div class="col">
+									<button id="today" disabled="true" class="active"><span></span>Today: 7,895,897</button>
+									 <button id="this-week"><span></span>This Week: 15,237,895,897</button>
+									 <button id="this-month"><span></span>June 2020: 21,237,895,897</button>
+									 <button id="financial-year"><span></span>FY 19/20: 452,237,895,897</button>
+								</div>
+							</div>
+<!--							control buttons-->
+						</div>
+					</div>
+			</div>
+			<section class="content light-body">
+                <header class="content__title px-0 border-0">
+				 	<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">dashboard</h1>
+							</span>
+							<div class="">
+								<ol class="breadcrumb border-0 d-none">
+									<li class="breadcrumb-item active">Home</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</header>
 
-                <!-- Legend -->
-                <div id="devicesChartLegend" class="chart-legend"></div>
+				<div class="row clearfix">
+					<div class="col-12">
+						<h2>Important statistics</h2>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<a href="leave.html" class="card light-card calc-34">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div class="icon-in-bg bg-warning text-white rounded-circle" style="font-size: 12px;">
+										<span class=""><i class="mdi mdi-account-arrow-right font-30"></i></span>
+									</div>
+									<div class="ml-4">
+										<span class="font-12">Employees On Leave <strong class="today-full d-none"></strong></span>
+										<h4 class="mt-1 mb-0 font-weight-medium">22 Employees</h4>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					
+					<div class="col-lg-3 col-md-6">
+						<a href="#" class="card calc-34">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div class="icon-in-bg text-white rounded-circle bg-danger text-uppercase">
+										<span class=""><i class="mdi mdi-cash-remove"></i></span>									</div>
+									<div class="ml-4">
+										<span class="font-12">Pending Payslips</span>
+										<h4 class="mt-1 mb-0 font-weight-medium">22 Payslips</h4>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<a href="departments.html" class="card calc-34">
+							<div class="card-body">
+								<div class="d-flex align-items-center">
+									<div class="icon-in-bg bg-orange text-white rounded-circle">
+										<span class=""><i class="font-30 mdi mdi-folder-account"></i></span>
+									</div>
+									<div class="ml-4">
+										<span class="font-12">Total Departments</span>
+										<h4 class="mt-1 mb-0 font-weight-medium">12 Departments</h4>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
 
-              </div>
-            </div>
-            
-          </div>
-        </div> <!-- / .row -->
-        <div class="row">
-          <div class="col-12 col-xl-5">
+					<div class="col-lg-3 col-md-6">
+						<a class="card calc-34" href="#!">
+							<div class="card-body bg-primary">
+								<div class="d-flex align-items-center">
+									<div class="icon-in-bg text-white rounded-circle bg-orange text-uppercase d-none">
+										<span class=""><i><img src="demo/img/icons/week.svg"></i></span>
+									</div>
+									<div class="w-100">
+										<span class="font-12 text-white-50">Value of unpaid salaries<strong class="week-full d-none"></strong></span>
+										<h4 class="mt-1 mb-0 font-weight-medium text-white">KES 605,520,000 </h4>
 
-            <!-- Projects -->
-            <div class="card">
-              <div class="card-header">
-                <div class="row align-items-center">
-                  <div class="col">
-                    
-                    <!-- Title -->
-                    <h4 class="card-header-title">
-                      Product Performance<br>
-                      <small class="text-mute">See how your products are performing</small>
-                    </h4>
+										<div class="row align-items-center no-gutters">
+											<div class="col-auto">
+					  
+											  <!-- Heading -->
+											  <small class="mr-2 mb-0">
+											   <strong class="text-white"> 84.5% Paid</strong>
+											  </small>
+											  
+											</div>
+											<div class="col">
+											  
+											  <!-- Progress -->
+											  <div class="progress progress-sm">
+												<div class="progress-bar progress-bar-secondary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+											  </div>
+					  
+											</div>
+										  </div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
 
-                  </div>
-                  <div class="col-auto">
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="card">
+							<div class="card-header new-header">
+								<div class="row align-items-center">
+									<div class="col">
+									<!-- Title -->
+									<h4 class="card-header-title">
+										Gender statistics
+									</h4>
+									</div>
+	
+									<div class="col-auto opacity-0">
+									<!-- Tabs -->
+									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+										<li class="nav-item">
+										<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
+											A
+										</a>
+										</li>
+										<li class="nav-item">
+										<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
+											L
+										</a>
+										</li>									 
+									</ul>				
+									</div>
+								</div> 
+								<!-- / .row -->				
+							</div>
+							<div class="card-body px-1 pb-1">
+								<div id="emp-gender" style="height: 230px;">
 
-                    <!-- Link -->
-                    <a href="products.html" class="small">View all</a>
-                    
-                  </div>
-                </div> <!-- / .row -->
-              </div>
-              <div class="card-body">
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="assets/img/avatars/product-logos/blink.png" class="avatar avatar-4by3">
-                      <img src="assets/img/avatars/product-logos/blink.png" alt="..." class="avatar-img rounded">
-                    </a>
+								</div>
 
-                  </div>
-                  <div class="col ml-n2">
+							</div>
+							<div class="card-footer p-3">
+								<div class="row">
+									
+									<div class="col-auto">
 
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="blink.html">Blink</a>
-                    </h4>
+										<div class="d-flex justify-content-center align-items-center">
+											<div class="mr-2 text-female">
+												<i class="mdi mdi-face-woman font-36"></i>
+											</div>
+											<div class="">
+												<small>Females</small>
+											<h6 class="m-0 p-0">32 (55%)</h6>
+											</div>
+										</div>
+									</div>
 
-                    <!-- Time -->
-                    <p class="card-text small text-success d-flex justify-content-between">
-                      <span>8 Creditors</span>
-                      <strong class="text-right">KES 200,000</strong>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto d-none">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#!" class="dropdown-item">
-                          Action
+									<div class="col-auto">
+
+										<div class="d-flex justify-content-center align-items-center">
+											<div class="mr-2 text-male">
+												<i class="mdi mdi-face font-36"></i>
+											</div>
+											<div class="">
+												<small>Male</small>
+											<h6 class="m-0 p-0">23 (45%)</h6>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="quick-stats__item bg-primary d-flex align-items-start">
+                            <div class="quick-stats__info ">
+                                <h2>23</h2>
+                                <small class="mb-0 pb-0">New Employees</small>
+                            </div>
+
+                            <div class="text-white font-36">
+								<i class="mdi mdi-account-plus-outline"></i>
+							</div>
+                        </div>
+						
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="card">
+							<div class="card-header new-header">
+								<div class="row align-items-center">
+									<div class="col">
+									<!-- Title -->
+									<h4 class="card-header-title">
+										Customers Served
+									</h4>
+									</div>
+	
+									<div class="col-auto opacity-0">
+									<!-- Tabs -->
+									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+										<li class="nav-item">
+										<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
+											A
+										</a>
+										</li>
+										<li class="nav-item">
+										<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
+											L
+										</a>
+										</li>									 
+									</ul>				
+									</div>
+								</div> 
+								<!-- / .row -->				
+							</div>
+							<div class="card-body px-1 pb-1">
+								<div id="customer-service" style="height: 230px;">
+
+								</div>
+
+							</div>
+							<div class="card-footer p-3">
+								<div class="row">
+
+									<div class="col-auto">
+
+										<div class="d-flex justify-content-center align-items-center">
+											<div class="mr-2 text-info">
+												<i class="mdi mdi-history font-36"></i>
+											</div>
+											<div class="">
+												<small>Hrs Passed</small>
+											<h6 class="m-0 p-0">6 Hrs</h6>
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-auto">
+
+										<div class="d-flex justify-content-center align-items-center">
+											<div class="mr-2 text-primary">
+												<i class="mdi mdi-account-clock font-36"></i>
+											</div>
+											<div class="">
+												<small>Avg Working Hrs Per User</small>
+											<h6 class="m-0 p-0">2 Hrs Per person</h6>
+											</div>
+										</div>
+									</div>
+
+									
+
+								</div>
+
+							</div>
+						</div>
+
+						<div class="quick-stats__item bg-secondary d-flex align-items-start">
+                            <div class="quick-stats__info mb-0 pb-0">
+                                <h2>32</h2>
+                                <small class="mb-0 pb-0">System users</small>
+                            </div>
+
+                            <div class="text-white font-36">
+								<i class="mdi mdi-account-tie-voice-outline"></i>
+							</div>
+                        </div>
+						
+						
+					</div>
+
+
+					<div class="col-lg-5 col-sm-12">
+						<!-- Orders -->
+						<div class="card">
+							<div class="card-header new-header">
+							<div class="row align-items-center">
+								<div class="col">
+								<!-- Title -->
+								<h4 class="card-header-title">
+									Salary Statistics Performance 
+								</h4>
+								</div>
+
+								<div class="col-auto">
+								<!-- Tabs -->
+								<ul class="nav nav-tabs nav-tabs-sm card-header-tabs opacity-0">
+									<li class="nav-item">
+									<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
+										All Loans
+									</a>
+									</li>
+									<li class="nav-item">
+									<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
+										Loan Breakdown
+									</a>
+									</li>									 
+								</ul>				
+								</div>
+							</div> 
+							<!-- / .row -->				
+							</div>
+							<div class="card-body">                
+							<!-- Chart -->
+								<div class="chart">
+									<div id="perfomance" style="height: 100%"></div>
+								</div>
+							<!-- <div class="chart">
+								<canvas id="transaction-data" class="chart-canvas"></canvas>
+							</div> -->
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+			
+
+                <footer class="footer hidden-xs-down">
+					<center><a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
+                    <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+                </footer>
+            </section>
+        </main>
+
+        <!-- Older IE warning message -->
+            <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
                         </a>
-                        <a href="#!" class="dropdown-item">
-                          Another action
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
                         </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
                         </a>
-                      </div>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
                     </div>
-                    
-                  </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="#" class="avatar avatar-4by3">
-                      <img src="assets/img/avatars/product-logos/sacco-benki.png" alt="..." class="avatar-img rounded">
-                    </a>
-
-                  </div>
-                  <div class="col ml-n2">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="sacco-benki.html">Sacco Benki</a>
-                    </h4>
-
-                    <!-- Time -->
-                    <p class="card-text small d-flex justify-content-between text-success">
-                      <span>8 Creditors</span>
-                      <strong class="text-right">KES 180,000</strong>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto d-none">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#!" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="#" class="avatar avatar-4by3">
-                      <img src="assets/img/avatars/product-logos/pay.png" alt="..." class="avatar-img rounded">
-                    </a>
-
-                  </div>
-                  <div class="col ml-n2">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="payme.html">PayMe</a>
-                    </h4>
-
-                    <!-- Time -->
-                    <p class="card-text small text-success d-flex justify-content-between">
-                      <span>8 Creditors</span>
-                      <strong class="text-right">KES 190,000</strong>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto d-none">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#!" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div> <!-- / .row -->
-
-                <!-- Divider -->
-                <hr>
-
-                <div class="row align-items-center">
-                  <div class="col-auto">
-                    
-                    <!-- Avatar -->
-                    <a href="#" class="avatar avatar-4by3">
-                      <img src="assets/img/avatars/product-logos/revenueSure.png" alt="..." class="avatar-img rounded">
-                    </a>
-
-                  </div>
-                  <div class="col ml-n2">
-
-                    <!-- Title -->
-                    <h4 class="card-title mb-1">
-                      <a href="revenuesure.html">RevenueSure</a>
-                    </h4>
-
-                    <!-- Time -->
-                    <p class="card-text small text-success d-flex justify-content-between">
-                      <span>8 Creditors</span>
-                      <strong class="text-right">KES 305,000</strong>
-                    </p>
-                    
-                  </div>
-                  <div class="col-auto d-none">
-                    
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                      <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fe fe-more-vertical"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#!" class="dropdown-item">
-                          Action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Another action
-                        </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div> <!-- / .row -->
-
-              </div> <!-- / .card-body -->
-            </div> <!-- / .card -->           
-
-          </div>
-          <div class="col-12 col-xl-7">
-            
-            <!-- Performance -->
-            <div class="card">
-              <div class="card-header">
-                <div class="row align-items-center">
-                  <div class="col">
-                
-                    <!-- Title -->
-                    <h4 class="card-header-title">
-                      Performance
-                    </h4>
-
-                  </div>
-                  <div class="col-auto">
-
-                    <!-- Nav -->
-                    <ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-                      <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[0,10,5,15,10,20,15,25,20,30,25,40]}]}}'>
-                        <a class="nav-link active" href="#" data-toggle="tab">
-                          All
-                        </a>
-                      </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[7,35,12,27,34,17,19,30,28,32,24,39]}]}}'>
-                        <a class="nav-link" href="#" data-toggle="tab">
-                          Direct
-                        </a>
-                      </li>
-                      <li class="nav-item" data-toggle="chart" data-target="#performanceChart" data-update='{"data":{"datasets":[{"data":[2,12,35,25,36,25,34,16,4,14,15,37]}]}}'>
-                        <a class="nav-link" href="#" data-toggle="tab">
-                          Organic
-                        </a>
-                      </li>
-                    </ul>
-
-                  </div>
-                </div> <!-- / .row -->
-
-              </div>
-              <div class="card-body">
-                
-                <!-- Chart -->
-                <div class="chart">
-                  <canvas id="performanceChart" class="chart-canvas"></canvas>
+                    <p>Sorry for the inconvenience!</p>
                 </div>
+            <![endif]-->
 
-              </div>
-            </div>
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
 
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-xl-7">
-            
-            <!-- Goals -->
-            <div class="card">
-              <div class="card-header">
-                <div class="row align-items-center">
-                  <div class="col">
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+		
+		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="vendors/select2/js/select2.full.min.js"></script>
+        <script src="vendors/dropzone/dropzone.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/nouislider/nouislider.min.js"></script>
+        <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+        <script src="vendors/flatpickr/flatpickr.min.js"></script>
+        <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+        <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+        <script src="vendors/autosize/autosize.min.js"></script>
+		<script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+		
+		<!-- Vendors: Data tables -->
+		<script src="vendors/datatables/jquery.dataTables.min.js"></script>
+		<script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+		<script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+		<script src="vendors/jszip/jszip.min.js"></script>
+		<script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
 
-                    <!-- Title -->
-                    <h4 class="card-header-title">
-                      Goals
-                    </h4>
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+		
+		 <!-- high charts -->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/highcharts.js" integrity="sha512-PpL09bLaSaj5IzGNx6hsnjiIeLm9bL7Q9BB4pkhEvQSbmI0og5Sr/s7Ns/Ax4/jDrggGLdHfa9IbsvpnmoZYFA==" crossorigin="anonymous"></script>
+		 <!-- <script src="assets/libs/highcharts/highchart.js"></script> -->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/data.min.js" integrity="sha512-z2pVXf6Q3w/tD7NnbA/u/EDW7X8VUISARx3mVRk0vGULcDRcfhA65veFZS3LWW3DM8l/MW2Oxu8PlqJa+Za4Hw==" crossorigin="anonymous"></script>    
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/drilldown.min.js" integrity="sha512-1F5YJc0seERSBvoF3csYQm+JO6qF9O+1hwUKBbOUKcRj3RnDAmKEEzuqPnCcLOtt/2h2CzsCbSy0bv0yuCfZNQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/exporting.min.js" integrity="sha512-DuFO4JhOrZK4Zz+4K0nXseP0K/daLNCrbGjSkRzK+Zibkblwqc0BYBQ1sTN7mC4Kg6vNqr8eMZwLgTcnKXF8mg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/offline-exporting.min.js" integrity="sha512-5vKhOIyF4HBeTJQ4VvTAWGuAvGMp3BbDwD6CjzZPc0T/h4D8bqvvj+D/IYyJ1ua6s72VcuQ2fPEjBn+CHR6UWQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/export-data.min.js" integrity="sha512-JFLRyhQGrSpOOboAjCGEfEm0Z+GvPcucULDdEhRFoGtJJ439x64z/F1f6GTJM7+3PGqXqgkXNc6LO/04RGsW4w==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/accessibility.min.js" integrity="sha512-cN9FFspkIN+ZS37xvtrtP4jfDc7D1BA1ma9l2YPkV47Ac70t98RjOe9gR+2dCBUkiyamLLfFtqXH+/iL0fqhjw==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/es-modules/Series/ItemSeries.min.js" integrity="sha512-UnnyAAfaraMnJOILh+bwawPvAF4+bbOXAPcUv2OREvyYTdi8TPJ4UZ+Ip8IL3mMY+cAY/yzuzq+v/EvmoZx7iA==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/streamgraph.min.js" integrity="sha512-RjmbiCs5aaU692OGy4q5YbGnHmiGexQY54rMmsY2HbaHX6OJ5AxqAtDQ9lVGubnbz+UPanupAF3avZJKY2jNWg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/series-label.min.js" integrity="sha512-ppfBb+ms2RL9FloNCD8c9mykruT6sI5ACsAdSgS69pDv/Dnn64LGewhmLnMVTCm3Zt5K2LXamZD4Ndr9EFUhMQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/annotations.min.js" integrity="sha512-Qq+ClgMyYirIBC34w/LXcHhviIf+DvBzPW7vi3Ekn/jHYArYe+6TCiFp74q7pkUEitJLF543JCgxVQ6ax4xBNg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/bullet.min.js" integrity="sha512-RsB4WtWGLsMOVX4LGEqcG7TQHJBvD/wPgSYrN4zQUSvCzhubwAlxeXgFM1+ROQ7TzKfl0L6AbiBNXyRDBFKNoA==" crossorigin="anonymous"></script>
+		<script src="js/highcharts/theme1.js"></script>
 
-                  </div>
-                  <div class="col-auto">
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+		<!-- highcharts zoom -->
+		<script src="https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/usdeur.json"></script>
 
-                    <!-- Button -->
-                    <a href="#!" class="btn btn-sm btn-white">
-                      Export
-                    </a>
-                    
-                  </div>
-                </div> <!-- / .row -->
-              </div>
-              <div class="table-responsive mb-0" data-toggle="lists" data-lists-values='["goal-project", "goal-status", "goal-progress", "goal-date"]'>
-                <table class="table table-sm table-nowrap card-table">
-                  <thead>
-                    <tr>
-                      <th>
-                        <a href="#" class="text-muted sort" data-sort="goal-project">
-                          Goal
-                        </a>
-                      </th>
-                      <th>
-                        <a href="#" class="text-muted sort" data-sort="goal-status">
-                          Status
-                        </a>
-                      </th>
-                      <th>
-                        <a href="#" class="text-muted sort" data-sort="goal-progress">
-                          Progress
-                        </a>
-                      </th>
-                      <th>
-                        <a href="#" class="text-muted sort" data-sort="goal-date">
-                          Due date
-                        </a>
-                      </th>
-                      <th class="text-right">
-                        Team
-                      </th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody class="list">
-                    <tr>
-                      <td class="goal-project">
-                        Update the API
-                      </td>
-                      <td class="goal-status">
-                        <span class="text-warning">●</span> In progress
-                      </td>
-                      <td class="goal-progress">
-                        55%
-                      </td>
-                      <td class="goal-date">
-                        <time datetime="2018-10-24">07/24/18</time>
-                      </td>
-                      <td class="text-right">
-                        <div class="avatar-group">
-                          <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                            <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="profile-posts.html" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
-                            <img src="assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                        </div>
-                      </td>
-                      <td class="text-right">
-                        <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="goal-project">
-                        Release v1.2-Beta
-                      </td>
-                      <td class="goal-status">
-                        <span class="text-warning">●</span> In progress
-                      </td>
-                      <td class="goal-progress">
-                        25%
-                      </td>
-                      <td class="goal-date">
-                        <time datetime="2018-10-24">08/26/18</time>
-                      </td>
-                      <td class="text-right">
-                        <div class="avatar-group justify-content-end">
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                            <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                        </div>
-                      </td>
-                      <td class="text-right">
-                        <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="goal-project">
-                        GDPR Compliance
-                      </td>
-                      <td class="goal-status">
-                        <span class="text-success">●</span> Completed
-                      </td>
-                      <td class="goal-progress">
-                        100%
-                      </td>
-                      <td class="goal-date">
-                        <time datetime="2018-10-24">06/19/18</time>
-                      </td>
-                      <td class="text-right">
-                        <div class="avatar-group justify-content-end">
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                            <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                        </div>
-                      </td>
-                      <td class="text-right">
-                        <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="goal-project">
-                        v1.2 Documentation
-                      </td>
-                      <td class="goal-status">
-                        <span class="text-danger">●</span> Cancelled
-                      </td>
-                      <td class="goal-progress">
-                        0%
-                      </td>
-                      <td class="goal-date">
-                        <time datetime="2018-10-24">06/25/18</time>
-                      </td>
-                      <td class="text-right">
-                        <div class="avatar-group justify-content-end">
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                        </div>
-                      </td>
-                      <td class="text-right">
-                        <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="fe fe-more-vertical"></span>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="goal-project">
-                        Plan design offsite
-                      </td>
-                      <td class="goal-status">
-                        <span class="text-success">●</span> Completed
-                      </td>
-                      <td class="goal-progress">
-                        100%
-                      </td>
-                      <td class="goal-date">
-                        <time datetime="2018-10-24">06/30/18</time>
-                      </td>
-                      <td class="text-right">
-                        <div class="avatar-group justify-content-end">
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Dianna Smiley">
-                            <img src="assets/img/avatars/profiles/avatar-1.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Ab Hadley">
-                            <img src="assets/img/avatars/profiles/avatar-2.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Adolfo Hess">
-                            <img src="assets/img/avatars/profiles/avatar-3.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                          <a href="#!" class="avatar avatar-xs" data-toggle="tooltip" title="Daniela Dewitt">
-                            <img src="assets/img/avatars/profiles/avatar-4.jpg" class="avatar-img rounded-circle" alt="...">
-                          </a>
-                        </div>
-                      </td>
-                      <td class="text-right">
-                        <div class="dropdown">
-                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fe fe-more-vertical"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a href="#!" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Another action
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                              Something else here
-                            </a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-12 col-xl-5">
-            
-            <!-- Card -->
-            <div class="card">
-              <div class="card-body text-center">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-xl-10">
-                
-                    <!-- Image -->
-                    <img src="assets/img/illustrations/happiness.svg" alt="..." class="img-fluid mt-n5 mb-4" style="max-width: 272px;">
-
-                    <!-- Title -->
-                    <h2 class="mb-2">
-                      We released 2008 new versions of our theme for glory.
-                    </h2>
-
-                    <!-- Content -->
-                    <p class="text-muted">
-                      This is a true story and totally not made up. This is going to be better in the long run but for now this is the way it is.
-                    </p>
-
-                    <!-- Button -->
-                    <a href="#!" class="btn btn-primary">
-                      Try it for free
-                    </a>
-                  
-                  </div>
-                </div> <!-- / .row -->
-              </div>
-            </div>
-
-          </div>
-        </div> <!-- / .row -->
-      </div>
-
-    </div> <!-- / .main-content -->
-
-    <!-- JAVASCRIPT
-    ================================================== -->
-   <!-- Libs JS -->
-    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/libs/chart.js/dist/Chart.min.js"></script>
-    <script src="assets/libs/highlightjs/highlight.pack.min.js"></script>
-    <script src="assets/libs/flatpickr/dist/flatpickr.min.js"></script>
-    <script src="assets/libs/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
-    <script src="assets/libs/list.js/dist/list.min.js"></script>
-    <script src="assets/libs/quill/dist/quill.min.js"></script>
-    <script src="assets/libs/dropzone/dist/min/dropzone.min.js"></script>
-    <script src="assets/libs/select2/dist/js/select2.min.js"></script>
-    <script src="assets/libs/chart.js/Chart.extension.min.js"></script>
-
-    <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
-
-    <!-- high charts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/highcharts.js" integrity="sha512-PpL09bLaSaj5IzGNx6hsnjiIeLm9bL7Q9BB4pkhEvQSbmI0og5Sr/s7Ns/Ax4/jDrggGLdHfa9IbsvpnmoZYFA==" crossorigin="anonymous"></script>
-    <!-- <script src="assets/libs/highcharts/highchart.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/data.min.js" integrity="sha512-z2pVXf6Q3w/tD7NnbA/u/EDW7X8VUISARx3mVRk0vGULcDRcfhA65veFZS3LWW3DM8l/MW2Oxu8PlqJa+Za4Hw==" crossorigin="anonymous"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/drilldown.min.js" integrity="sha512-1F5YJc0seERSBvoF3csYQm+JO6qF9O+1hwUKBbOUKcRj3RnDAmKEEzuqPnCcLOtt/2h2CzsCbSy0bv0yuCfZNQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/exporting.min.js" integrity="sha512-DuFO4JhOrZK4Zz+4K0nXseP0K/daLNCrbGjSkRzK+Zibkblwqc0BYBQ1sTN7mC4Kg6vNqr8eMZwLgTcnKXF8mg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/offline-exporting.min.js" integrity="sha512-5vKhOIyF4HBeTJQ4VvTAWGuAvGMp3BbDwD6CjzZPc0T/h4D8bqvvj+D/IYyJ1ua6s72VcuQ2fPEjBn+CHR6UWQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/export-data.min.js" integrity="sha512-JFLRyhQGrSpOOboAjCGEfEm0Z+GvPcucULDdEhRFoGtJJ439x64z/F1f6GTJM7+3PGqXqgkXNc6LO/04RGsW4w==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/accessibility.min.js" integrity="sha512-cN9FFspkIN+ZS37xvtrtP4jfDc7D1BA1ma9l2YPkV47Ac70t98RjOe9gR+2dCBUkiyamLLfFtqXH+/iL0fqhjw==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/es-modules/Series/ItemSeries.min.js" integrity="sha512-UnnyAAfaraMnJOILh+bwawPvAF4+bbOXAPcUv2OREvyYTdi8TPJ4UZ+Ip8IL3mMY+cAY/yzuzq+v/EvmoZx7iA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/streamgraph.min.js" integrity="sha512-RjmbiCs5aaU692OGy4q5YbGnHmiGexQY54rMmsY2HbaHX6OJ5AxqAtDQ9lVGubnbz+UPanupAF3avZJKY2jNWg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/series-label.min.js" integrity="sha512-ppfBb+ms2RL9FloNCD8c9mykruT6sI5ACsAdSgS69pDv/Dnn64LGewhmLnMVTCm3Zt5K2LXamZD4Ndr9EFUhMQ==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/annotations.min.js" integrity="sha512-Qq+ClgMyYirIBC34w/LXcHhviIf+DvBzPW7vi3Ekn/jHYArYe+6TCiFp74q7pkUEitJLF543JCgxVQ6ax4xBNg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/bullet.min.js" integrity="sha512-RsB4WtWGLsMOVX4LGEqcG7TQHJBvD/wPgSYrN4zQUSvCzhubwAlxeXgFM1+ROQ7TzKfl0L6AbiBNXyRDBFKNoA==" crossorigin="anonymous"></script>
-    <script src="assets/js/highCharts-theme1.js"></script>
-    <!-- custom scroll -->
-    <script src="assets/libs/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-    <!-- chart data -->
-    <script src="assets/js/highcharts-data/revenue-collected.js"></script>
-    <script src="assets/js/highcharts-data/revenue-by-bank.js"></script>
-    <!-- Theme JS -->
-    <script src="assets/js/theme.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
-  </body>
+		<!--owl corousel-->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
 
 
+        <!-- App functions and actions -->
+     	<script src="js/wow.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>
+					
+        <script src="js/chart-data/revenue-targets.js"></script>
+        <script src="js/chart-data/revenue-streams.js"></script>
+		 <script src="js/chart-data/revenue-by-bank.js"></script>
+        <script src="js/chart-data/revenue-collected.js"></script>
+		<script src="js/chart-data/perfomance.js"></script>
+		<script src="js/chart-data/hourly-revenue-collection.js"></script>
+		<script src="js/chart-data/emp-gender.js"></script>
+		<script src="js/chart-data/customers-served.js"></script>
+		
+	
+		<!--map scripts-->
+		
+		<script src="js/chart-data/map-data.js"></script>
+		
+       
+		
+		
+		
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
 </html>
