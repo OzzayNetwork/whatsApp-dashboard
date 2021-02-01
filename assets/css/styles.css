@@ -1,0 +1,35 @@
+/* kelvin styles */
+.scrollbar-inner:not(:hover) .scroll-element {
+    opacity: 0;
+}
+
+.scrollbar-inner>.scroll-element.scroll-y {
+    width: 3px;
+    right: 0;
+}
+.scrollbar-inner>.scroll-element {
+    transition: opacity .3s;
+    margin-right: 2px;
+}
+.sidebar .scrollbar-inner>.scroll-element {
+    margin-right: 0;
+}
+.scrollbar-inner>.scroll-element.scroll-y {
+    width: 3px;
+    right: 0;
+}
+.scrollbar-inner:not(:hover) .scroll-element {
+    opacity: 0;
+}
+/* .chart .highcharts-container, .chart .highcharts-root {
+    width: 100% !important;
+    height: 100% !important;
+} */
+.highChartStyles{
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: table-cell;
+    top: 0px;
+    left: 0px;
+}
