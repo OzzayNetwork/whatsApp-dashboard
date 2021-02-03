@@ -2156,23 +2156,23 @@ a.btn.disabled, fieldset:disabled a.btn {
 }
 .btn-primary {
     color: #FFF;
-    background-color: #f26b29;
-    border-color: #f26b29
+    background-color: #32c787;
+    border-color: #32c787;
 }
 .btn-primary:hover {
     color: #FFF;
-    background-color:#ff9202;
-    border-color: #ff9202;
+    background-color: #5cd060;
+    border-color: #5cd060;
 }
 .btn-primary.disabled, .btn-primary:disabled {
     color: #FFF;
-    background-color: #f26b29;
-    border-color: #f26b29
+    background-color: #32c787;
+    border-color: #32c787;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     color: #FFF;
-    background-color: #f26b29;
-    border-color: #f26b29;;
+    background-color: #32c787;
+    border-color: #32c787;
 }
 .btn-secondary.focus, .btn-secondary:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0 rgba(152,159,166,.5)
@@ -9007,7 +9007,7 @@ select.form-control {
 }
 .breadcrumb-item>a, a.breadcrumb-item {
     color: #747a80;
-	color: #ff5722;
+	color: #32c787;
     font-weight: 800;
     font-size: 14px;
 }
@@ -9659,7 +9659,7 @@ button, input, optgroup, select, textarea {
 .avatar-char {
     font-size: 1.2rem;
     color: #FFF;
-	background: #00000026;
+	background: #32c787;
 }
 .ma-backdrop {
     height: 100%;
@@ -12762,7 +12762,7 @@ color:rgba(255,255,255,.75)
 }
 }
 .paginate_button.current {
-    background-color: #f26b29;
+    background-color: #32c787;
     color: #FFF;
     cursor: default
 }
@@ -13814,7 +13814,7 @@ thead tr, tfoot tr{
 }
 
 .paginate_button.current {
-    background-color:#f26b29;
+    background-color: #32c787;
     color: #FFF;
     cursor: default;
 }
@@ -14012,7 +14012,7 @@ strong{
 }
  .table td strong{
 	font-weight: bold;
-	/* color: #0255a3; */
+    /* color: #0255a3; */
 	cursor: pointer;
 }
 
