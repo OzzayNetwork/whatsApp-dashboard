@@ -16,12 +16,69 @@ $(window).on('load', function(){
 	$('.today-full').text(moment().format("MMM Do YY"));
 
 	const today = moment();
-		const otherday=moment()
-		const too_date = otherday.endOf('week');	
-		const from_date = today.startOf('week');			
-		const the_date=from_date.format("DD, MMM")+' To '+too_date.format("DD, MMM");
-		$('.week-full').text(the_date);
+	const otherday=moment()
+	const too_date = otherday.endOf('week');	
+	const from_date = today.startOf('week');			
+	const the_date=from_date.format("DD, MMM")+' To '+too_date.format("DD, MMM");
+	$('.week-full').text(the_date);
 		//alert(from_date);
+
+		function reset_date(){
+			$('#reportrange span').html(moment().format('MMMM D, YYYY'));
+			$('#today').html(moment().format('MMMM D, YYYY'));
+			$('#date-reset').addClass('d-none');    
+
+		}
+
+		var start = moment();
+		var end = moment();
+
+		$(function() {
+
+			function cb(start, end) {
+				// $('#today').html(start.format('MMMM D, YYYY'));
+
+				if(end.format('MMMM D, YYYY') === start.format('MMMM D, YYYY')){            
+					$('#reportrange span').html(start.format('MMMM D, YYYY'));
+					$('#today').html(start.format('MMMM D, YYYY'));
+
+					if(moment().format('MMMM D, YYYY') === start.format('MMMM D, YYYY')){
+						// if todays date is today
+						$('#date-reset').addClass('d-none');
+					}
+					else{
+						$('#date-reset').removeClass('d-none'); 
+					}
+
+					
+
+				} else {
+					$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+					$('#today').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+					$('#date-reset').removeClass('d-none'); 
+				}
+
+			}
+
+			$('#reportrange').daterangepicker({
+				startDate: start,
+				endDate: end,
+				ranges: {
+					'Today': [moment(), moment()],
+					'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+					'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+					'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+					'This Month': [moment().startOf('month'), moment().endOf('month')],
+					'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+				}
+			}, cb, );
+
+			cb(start, end);
+
+		});
+
+
+
 	
 //	custom day time picker
 	$('#daily_date').on('change', function(){
