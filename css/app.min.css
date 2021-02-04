@@ -9006,8 +9006,7 @@ select.form-control {
     color: #434343
 }
 .breadcrumb-item>a, a.breadcrumb-item {
-    color: #747a80;
-	color: #32c787;
+	color: #138c7e;
     font-weight: 800;
     font-size: 14px;
 }
@@ -10506,7 +10505,7 @@ font-weight: 400;
     margin-right: .5rem
 }
 .listview:not(.listview--inverse) .listview__item--active, .listview:not(.listview--inverse).listview--hover .listview__item:hover, .listview:not(.listview--inverse).listview--striped .listview__item:nth-child(even) {
-    background-color: #f9f9f9
+    background-color: #ddf8c6;
 }
 .listview:not(.listview--inverse).listview--bordered .listview__item+.listview__item {
     border-top: 1px solid #f6f6f6
@@ -10999,7 +10998,7 @@ stroke:#FF9800
     content: "";
     font-size: 1.3rem;
     position: absolute;
-    left: 0;
+    left: 10px;
     bottom: .15rem
 }
 .messages__search .form-control {
@@ -11083,7 +11082,8 @@ stroke:#FF9800
     margin-right: .3rem
 }
 .messages__details:not(.messages__details--highlight)>p {
-    background-color: #f9f9f9
+    background-color: rgb(220 248 198);
+    color: black;
 }
 .messages__item--right {
     -webkit-box-orient: horizontal;
@@ -11104,7 +11104,9 @@ stroke:#FF9800
 .messages__item--right .messages__details>p {
     background-color: #0553A1;
     color: #FFF;
-    margin-left: auto
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 .messages__reply {
     border-top: 1px solid #f6f6f6;
@@ -15990,4 +15992,7 @@ padding:1.25rem 2.2rem;
 }
 .text-male{
     color: #2ca9d9;
+}
+.font-18px{
+    font-size: 18px !important;
 }
