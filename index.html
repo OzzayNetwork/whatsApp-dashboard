@@ -292,20 +292,34 @@
 					</div>
 				</header>
 
-				<div class="row clearfix">
-					<div class="col-12">
+				<div class="row d-flex justify-content-center flex-row clearfix mb-4">
+					<div class="col-sm-12 col-lg-9">
 						<h2>Important statistics</h2>
 					</div>
+
+					<div class="col-sm-12 col-lg-3">                                       
+						<div class="actions date_container">
+							<div id="reportrange"
+								style="background: #f3f3f3; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+								<i class="ti-calendar"></i>&nbsp;
+								<span></span> <i class="fa fa-caret-down"></i>
+							</div>  
+							<button class="btn btn-success d-none text-nowrap " id="date-reset" onclick="reset_date()">Reset Date</button>
+						</div>
+					</div>
+
+				</div>
+				<div class="row mt-2">					
 					<div class="col-lg-3 col-md-6">
-						<a href="leave.html" class="card light-card calc-34">
+						<a href="all-accounts.html" class="card light-card calc-34">
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="icon-in-bg bg-warning text-white rounded-circle" style="font-size: 12px;">
-										<span class=""><i class="mdi mdi-account-arrow-right font-30"></i></span>
+										<span class=""><i class="mdi mdi-account-multiple font-30"></i></span>
 									</div>
 									<div class="ml-4">
-										<span class="font-12">Employees On Leave <strong class="today-full d-none"></strong></span>
-										<h4 class="mt-1 mb-0 font-weight-medium">22 Employees</h4>
+										<span class="font-12">Total Users<strong class="today-full d-none"></strong></span>
+										<h4 class="mt-1 mb-0 font-weight-medium">22 Users</h4>
 									</div>
 								</div>
 							</div>
@@ -313,29 +327,29 @@
 					</div>
 					
 					<div class="col-lg-3 col-md-6">
-						<a href="#" class="card calc-34">
+						<a href="ticktes.html" class="card calc-34">
 							<div class="card-body">
 								<div class="d-flex align-items-center">
 									<div class="icon-in-bg text-white rounded-circle bg-danger text-uppercase">
-										<span class=""><i class="mdi mdi-cash-remove"></i></span>									</div>
+										<span class=""><i class="mdi mdi-ticket"></i></span>									</div>
 									<div class="ml-4">
-										<span class="font-12">Pending Payslips</span>
-										<h4 class="mt-1 mb-0 font-weight-medium">22 Payslips</h4>
+										<span class="font-12">Total Tickets</span>
+										<h4 class="mt-1 mb-0 font-weight-medium">22 Tickets</h4>
 									</div>
 								</div>
 							</div>
 						</a>
 					</div>
 					<div class="col-lg-3 col-md-6">
-						<a href="departments.html" class="card calc-34">
-							<div class="card-body">
+						<a href="transactions.html" class="card calc-34">
+							<div class="card-body bg-primary">
 								<div class="d-flex align-items-center">
 									<div class="icon-in-bg bg-orange text-white rounded-circle">
-										<span class=""><i class="font-30 mdi mdi-folder-account"></i></span>
+										<span class=""><i class="font-30 mdi mdi-cash-multiple"></i></span>
 									</div>
 									<div class="ml-4">
-										<span class="font-12">Total Departments</span>
-										<h4 class="mt-1 mb-0 font-weight-medium">12 Departments</h4>
+										<span class="font-12 text-white">Total Amount Collected</span>
+										<h4 class="mt-1 mb-0 font-weight-medium text-white">KES 605,520,000</h4>
 									</div>
 								</div>
 							</div>
@@ -344,28 +358,28 @@
 
 					<div class="col-lg-3 col-md-6">
 						<a class="card calc-34" href="#!">
-							<div class="card-body bg-primary">
+							<div class="card-body bg-danger">
 								<div class="d-flex align-items-center">
 									<div class="icon-in-bg text-white rounded-circle bg-orange text-uppercase d-none">
 										<span class=""><i><img src="demo/img/icons/week.svg"></i></span>
 									</div>
 									<div class="w-100">
-										<span class="font-12 text-white-50">Value of unpaid salaries<strong class="week-full d-none"></strong></span>
-										<h4 class="mt-1 mb-0 font-weight-medium text-white">KES 605,520,000 </h4>
+										<span class="font-12 text-white">Pending Tickets<strong class="week-full d-none"></strong></span>
+										<h4 class="mt-1 mb-0 font-weight-medium text-white">18 Tickets </h4>
 
 										<div class="row align-items-center no-gutters">
 											<div class="col-auto">
 					  
 											  <!-- Heading -->
-											  <small class="mr-2 mb-0">
-											   <strong class="text-white"> 84.5% Paid</strong>
+											  <small class="mr-2 mb-0 d-none">
+											   <strong class="text-white"> 84.5% Pending</strong>
 											  </small>
 											  
 											</div>
 											<div class="col">
 											  
 											  <!-- Progress -->
-											  <div class="progress progress-sm">
+											  <div class="progress progress-sm d-none">
 												<div class="progress-bar progress-bar-secondary" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
 											  </div>
 					  
@@ -379,14 +393,14 @@
 				</div>
 
 				<div class="row">
-					<div class="col-lg-3 col-md-6">
+					<div class="col-lg-6 col-md-6 col-lg-6">
 						<div class="card">
 							<div class="card-header new-header">
 								<div class="row align-items-center">
 									<div class="col">
 									<!-- Title -->
 									<h4 class="card-header-title">
-										Gender statistics
+										Menu Visits
 									</h4>
 									</div>
 	
@@ -409,64 +423,22 @@
 								<!-- / .row -->				
 							</div>
 							<div class="card-body px-1 pb-1">
-								<div id="emp-gender" style="height: 230px;">
-
-								</div>
-
-							</div>
-							<div class="card-footer p-3">
-								<div class="row">
-									
-									<div class="col-auto">
-
-										<div class="d-flex justify-content-center align-items-center">
-											<div class="mr-2 text-female">
-												<i class="mdi mdi-face-woman font-36"></i>
-											</div>
-											<div class="">
-												<small>Females</small>
-											<h6 class="m-0 p-0">32 (55%)</h6>
-											</div>
-										</div>
-									</div>
-
-									<div class="col-auto">
-
-										<div class="d-flex justify-content-center align-items-center">
-											<div class="mr-2 text-male">
-												<i class="mdi mdi-face font-36"></i>
-											</div>
-											<div class="">
-												<small>Male</small>
-											<h6 class="m-0 p-0">23 (45%)</h6>
-											</div>
-										</div>
-									</div>
+								<div id="perfomance" style="height: 100%;">
 
 								</div>
 
 							</div>
 						</div>
-						<div class="quick-stats__item bg-primary d-flex align-items-start">
-                            <div class="quick-stats__info ">
-                                <h2>23</h2>
-                                <small class="mb-0 pb-0">New Employees</small>
-                            </div>
-
-                            <div class="text-white font-36">
-								<i class="mdi mdi-account-plus-outline"></i>
-							</div>
-                        </div>
 						
 					</div>
-					<div class="col-lg-4 col-md-6">
+					<div class="col-lg-6 col-md-6 col-lg-6">
 						<div class="card">
 							<div class="card-header new-header">
 								<div class="row align-items-center">
 									<div class="col">
 									<!-- Title -->
 									<h4 class="card-header-title">
-										Customers Served
+										Total Collections
 									</h4>
 									</div>
 	
@@ -489,63 +461,18 @@
 								<!-- / .row -->				
 							</div>
 							<div class="card-body px-1 pb-1">
-								<div id="customer-service" style="height: 230px;">
+								<div id="transaction-data" style="height: 100%;">
 
 								</div>
 
 							</div>
-							<div class="card-footer p-3">
-								<div class="row">
 
-									<div class="col-auto">
-
-										<div class="d-flex justify-content-center align-items-center">
-											<div class="mr-2 text-info">
-												<i class="mdi mdi-history font-36"></i>
-											</div>
-											<div class="">
-												<small>Hrs Passed</small>
-											<h6 class="m-0 p-0">6 Hrs</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="col-auto">
-
-										<div class="d-flex justify-content-center align-items-center">
-											<div class="mr-2 text-primary">
-												<i class="mdi mdi-account-clock font-36"></i>
-											</div>
-											<div class="">
-												<small>Avg Working Hrs Per User</small>
-											<h6 class="m-0 p-0">2 Hrs Per person</h6>
-											</div>
-										</div>
-									</div>
-
-									
-
-								</div>
-
-							</div>
-						</div>
-
-						<div class="quick-stats__item bg-secondary d-flex align-items-start">
-                            <div class="quick-stats__info mb-0 pb-0">
-                                <h2>32</h2>
-                                <small class="mb-0 pb-0">System users</small>
-                            </div>
-
-                            <div class="text-white font-36">
-								<i class="mdi mdi-account-tie-voice-outline"></i>
-							</div>
-                        </div>
-						
+						</div>						
 						
 					</div>
 
 
-					<div class="col-lg-5 col-sm-12">
+					<div class="col-lg-5 col-sm-12 d-none">
 						<!-- Orders -->
 						<div class="card">
 							<div class="card-header new-header">
@@ -589,6 +516,132 @@
 
 					
 				</div>
+
+				<div class="row">
+					<div class="col-sm-12 col-md-6 col-lg-7">
+						<div class="card">
+							<div class="card-header new-header">
+								<div class="row align-items-center">
+									<div class="col">
+									<!-- Title -->
+									<h4 class="card-header-title">
+										Tickets
+									</h4>
+									</div>
+	
+									<div class="col-auto opacity-0">
+									<!-- Tabs -->
+									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+										<li class="nav-item">
+										<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
+											A
+										</a>
+										</li>
+										<li class="nav-item">
+										<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
+											L
+										</a>
+										</li>									 
+									</ul>				
+									</div>
+								</div> 
+								<!-- / .row -->				
+							</div>
+							<div class="card-body px-1 pb-1">
+								<div id="active-branches" style="height: 100%;">
+
+								</div>
+
+							</div>
+						</div>
+						
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<div class="card">
+							<div class="card-header new-header">
+								<div class="row align-items-center">
+									<div class="col">
+									<!-- Title -->
+									<h4 class="card-header-title">
+										Sessions
+									</h4>
+									</div>
+	
+									<div class="col-auto opacity-0">
+									<!-- Tabs -->
+									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
+										<li class="nav-item">
+										<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
+											A
+										</a>
+										</li>
+										<li class="nav-item">
+										<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
+											L
+										</a>
+										</li>									 
+									</ul>				
+									</div>
+								</div> 
+								<!-- / .row -->				
+							</div>
+							<div class="card-body px-1 pb-1">
+								<div id="members-activity" style="height: 100%;">
+
+								</div>
+
+							</div>
+						</div>
+						
+					</div>
+
+
+					<div class="col-lg-5 col-sm-12 d-none">
+						<!-- Orders -->
+						<div class="card">
+							<div class="card-header new-header">
+							<div class="row align-items-center">
+								<div class="col">
+								<!-- Title -->
+								<h4 class="card-header-title">
+									Salary Statistics Performance 
+								</h4>
+								</div>
+
+								<div class="col-auto">
+								<!-- Tabs -->
+								<ul class="nav nav-tabs nav-tabs-sm card-header-tabs opacity-0">
+									<li class="nav-item">
+									<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
+										All Loans
+									</a>
+									</li>
+									<li class="nav-item">
+									<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
+										Loan Breakdown
+									</a>
+									</li>									 
+								</ul>				
+								</div>
+							</div> 
+							<!-- / .row -->				
+							</div>
+							<div class="card-body">                
+							<!-- Chart -->
+								<div class="chart">
+									<div id="perfomance" style="height: 100%"></div>
+								</div>
+							<!-- <div class="chart">
+								<canvas id="transaction-data" class="chart-canvas"></canvas>
+							</div> -->
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+
 
 			
 
@@ -650,7 +703,8 @@
         <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
         <script src="vendors/salvattore/salvattore.min.js"></script>
         <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
-        <script src="vendors/moment/moment.min.js"></script>
+		<script src="vendors/moment/moment.min.js"></script>
+		<script src="vendors/daterangepicker/daterangepicker.min.js"></script>
         <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
 		
 		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
@@ -722,6 +776,8 @@
 		<script src="js/chart-data/hourly-revenue-collection.js"></script>
 		<script src="js/chart-data/emp-gender.js"></script>
 		<script src="js/chart-data/customers-served.js"></script>
+		<script src="js/chart-data/active-branches.js"></script>
+		<script src="js/chart-data/members-activity.js"></script>
 		
 	
 		<!--map scripts-->
