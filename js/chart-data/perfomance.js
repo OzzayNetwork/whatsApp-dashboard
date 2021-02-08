@@ -60,7 +60,7 @@ Highcharts.chart('perfomance', {
         min: 0,
 
         title: {
-            text: 'Cash in KES',
+            text: 'Menu Visits',
             labels: {
                 style: {
                     color: '#12263f'

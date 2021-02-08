@@ -4,13 +4,13 @@ Highcharts.chart('members-activity', {
         type: 'spline'
     },
     title: {
-        text: 'Member Activity Summary',
+        text: 'Sessions Summary',
 		style: {
             color: '#12263f'
         }
     },
     subtitle: {
-        text: 'Comparisons between member exits and entry.',
+        text: 'Comparisons between complete and incomplete sessions.',
 		style: {
             color: '#12263f'
         }
@@ -55,7 +55,7 @@ Highcharts.chart('members-activity', {
         min: 0,
 
         title: {
-            text: 'Members Number',
+            text: 'Number of Sessions',
             labels: {
                 style: {
                     color: '#12263f'
@@ -88,7 +88,7 @@ Highcharts.chart('members-activity', {
     },
     series: [
         {
-        name: 'Exits',
+        name: 'Complete',
         color: '#FC1808',
         data: [{
                 name: 'Jan',
@@ -141,7 +141,7 @@ Highcharts.chart('members-activity', {
             }]
 
     },{
-        name: 'Entry',
+        name: 'Incomplete',
         color: '#09AF00',
         data: [
             {
