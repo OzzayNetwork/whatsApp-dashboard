@@ -92,7 +92,7 @@ Highcharts.chart('transaction-data', {
     series: [{
         name: "Monthly Transactions",
         colorByPoint: false,
-		color: '#32c787',// blue
+		color: '#075e54',// blue
         data: [{
                 name: "Jan",
                 y: 2000000,

@@ -92,7 +92,7 @@ Highcharts.chart('perfomance', {
     series: [{
         name: "Menu Visits",
         colorByPoint: false,
-		color: '#32c787',// blue
+		color: '#075e54',// blue
         data: [{
                 name: "Parking",
                 y: 2000000,
