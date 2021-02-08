@@ -1,28 +1,62 @@
+ // Create the chart
+//Highcharts.setOptions({
+//    colors: ['#67ff6b']
+//});
 Highcharts.chart('perfomance', {
     chart: {
         backgroundColor: 'transparent',
         type: 'column'
     },
     title: {
-        text: null,
-		style: {
-            color: '#12263f'
+        text: 'Menu Visits Summary',
+        style: {
+            color: '#a5a8ad'
         }
     },
-    subtitle: {
-        text: null,
-		style: {
-            color: '#12263f'
+
+    accessibility: {
+        announceNewData: {
+            enabled: true
         }
     },
-	 legend: {
+
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            borderColor: '#67ff6b'
+        }
+    },
+
+    xAxis: {
+        type: 'category',
+        lineColor: '#a5a8ad',
+        lineWidth: 1,
+        labels: {
+            style: {
+                color: '#a5a8ad'
+            }
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Total Menu Visists',
+            gridLineColor: '#2e3134',
+            labels: {
+                style: {
+                    color: '#a5a8ad'
+                }
+            }
+        }
+
+    },
+    legend: {
         enabled: true,
         backgroundColor: 'transparent',
-		 color: '#12263f',
+		 color: '#a5a8ad',
 		  itemStyle: {
 //                 fontSize:'35px',
 //                 font: '35pt Trebuchet MS, Verdana, sans-serif',
-                 color: '#12263f'
+                 color: '#a5a8ad'
               },
               itemHoverStyle: {
                  color: 'white'
@@ -31,75 +65,124 @@ Highcharts.chart('perfomance', {
                  color: '#444'
               },
         style: {
-            color: '#12263f',
+            color: '#a5a8ad',
 
         }
-    },
-    xAxis: {
-        categories: [
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'Jun',
-            'Jul',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec'
-        ],
-        crosshair: true
-    },
-    yAxis: {
-
-        gridLineColor: '#95aac9',
-        gridLineDashStyle: 'ShortDot',
-        gridLineWidth: 0.3,
-        min: 0,
-
-        title: {
-            text: 'Menu Visits',
-            labels: {
-                style: {
-                    color: '#12263f'
-                }
-            }
-        },
-        stackLabels: {
-            enabled: false,
-            style: {
-                fontWeight: 'bold',
-                color: '#12263f'
-            }
-        }
-
     },
     tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>KES {point.y:.1f}</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [
-        {
-            name: 'Last Year',
-            color: '#747a80',
-            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
-    
-        },{
-        name: 'This Year',
-        color: '#f26b29',
-        data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+        headerFormat: '<span style="font-size:16px; font-weight:800;">{series.name}</span><br>',
+        pointFormat: '<span  style="font-size:16px; font-weight:800; color:{point.color}">{point.name}</span>: <b style="color:{point.color}">KES {point.y}</b><br/>',
+        formatter: function () {
 
-    }, ]
+            var point = this.point,
+                s = '<span style="font-size:16px; font-weight:800;">' + this.series.name + '</span><br/><p><span  style="font-size:16px; font-weight:800; color:{point.color}>' + point.name + '</span> :<b> KES ' + Highcharts.numberFormat(point.y, 0, '.', ',') + '' + '<br/></p>';
+            if (point.drilldown) {
+                s += '<p><br/> Click to view <b>' + point.name + '</b> Collections </p>';
+            }
+            return s;
+        },
+        crosshairs: true
+
+
+    },
+    lang: {
+        thousandsSep: ','
+    },
+
+    series: [{
+        name: "Menu Visits",
+        colorByPoint: false,
+		color: '#32c787',// blue
+        data: [{
+                name: "Parking",
+                y: 2000000,
+                drilldown: "Parking"
+            },
+            {
+                name: "Business Permits",
+                y: 300000,
+                drilldown: "Business Permits"
+            },
+            {
+                name: "Land Rates",
+                y: 2536000,
+                drilldown: "Land Rates"
+            },
+            {
+                name: "Rent",
+                y: 3258023,
+                drilldown: "Rent"
+            },
+            {
+                name: "Bill Payments",
+                y: 2225895,
+                drilldown: "Bill Payments"
+            },
+        ]
+    }],
+    drilldown: {
+        series: [{
+            name: 'Parking',
+            id: 'Parking',
+            data: [{
+                    name: 'Daily Parking',
+                    y: 22,
+                    drilldown: 'Daily Parking'
+                },
+                {
+                    name: 'Seasonal Parking',
+                    y: 22,
+                    drilldown: 'Seasonal Parking'
+                },
+                {
+                    name: 'Offstreet Parking',
+                    y: 224,
+                    drilldown: 'Offstreet Parking'
+                },
+                {
+                    name: 'Parking Status',
+                    y: 202,
+                    drilldown: 'Parking Status'
+                },
+            ]
+        }, {
+            name: 'Chrome',
+            id: 'Chrome',
+            data: [
+                ['v40.0', 5],
+                ['v50.0', 7],
+                ['v60.0', 8],
+                ['v70.0', 17],
+                ['v80.0', 37],
+                ['v89.0', 27]
+            ]
+        }, {
+            name: 'Daily Parking',
+            id: 'Daily Parking',
+			type: 'spline',
+            data: [
+                ['CBD', 17.2],
+                ['KIJABE', 25.2],
+                ['WESTLANDS', 25.2],
+                ['KILIMANI', 5],
+                ['UPPER_HILL', 7],
+                ['KOMBO', 8],
+                ['COMM', 17],
+                ['NGARA', 37],
+                ['HIGHRIDGE', 27],
+                ['IND.AREA', 17.2],
+                ['YAYA', 25.2],
+                ['PARKING_BORDER', 5],
+                ['HURLINGHAM', 7],
+                ['LAVINGTON', 8],
+                ['KAREN', 17],
+                ['BURU', 37],
+                ['PANGANI', 27],
+                ['MUTHAIGA', 27],
+                ['EASTLEIGH', 8],
+                ['NGONG', 17],
+                ['UTAWALA', 37],
+            ]
+        }]
+    }
 });
