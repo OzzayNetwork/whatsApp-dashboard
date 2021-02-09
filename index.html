@@ -361,7 +361,8 @@
 							<div class="card-body bg-primary">
 								<div class="d-flex align-items-center">
 									<div class="icon-in-bg text-white rounded-circle text-uppercase" style="background-color: #138c7e;">
-										<span class=""><i class="zmdi zmdi-comment-more"></i></span>									</div>
+										<span class=""><i class="zmdi zmdi-comment-more"></i></span>									
+									</div>
 									<div class="ml-4">
 										<span class="font-12 text-white">Pending Tickets</span>
 										<h4 class="mt-1 mb-0 font-weight-medium text-white">18 Tickets</h4>
@@ -419,20 +420,15 @@
 									</h4>
 									</div>
 	
-									<div class="col-auto opacity-0">
-									<!-- Tabs -->
-									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-										<li class="nav-item">
-										<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
-											A
-										</a>
-										</li>
-										<li class="nav-item">
-										<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
-											L
-										</a>
-										</li>									 
-									</ul>				
+									<div class="col-auto">
+										<div class="actions date_container">
+											<div id="reportrange"
+												style="background: #f3f3f3; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+												<i class="ti-calendar"></i>&nbsp;
+												<span></span> <i class="fa fa-caret-down"></i>
+											</div>  
+											<button class="btn btn-success d-none text-nowrap " id="date-reset" onclick="reset_date()">Reset Date</button>
+										</div>
 									</div>
 								</div> 
 								<!-- / .row -->				
@@ -444,18 +440,42 @@
 
 							</div>
 						</div>
-						<div class="quick-stats__item bg-secondary d-flex align-items-start">
+						<div class="quick-stats__item" style="background-color: #fff;">
                             <div class="quick-stats__info mb-0 pb-0">
-                                <h2>32</h2>
-                                <small class="mb-0 pb-0">System users</small>
+                                <h4 class="text-black font-weight-medium">Ticket Sessions</h4>
+                                <small class="mb-0 pb-0 d-none">22</small>
+								<div class="d-flex justify-content-start process">
+									<div class="p-engaged"></div>
+									<div class="p-onhold"></div>
+									<div class="p-unassigned"></div>
+									<div class="p-closed"></div>
+
+								</div>
+								<div class="d-flex justify-content-start align-items-center">
+									
+									<div class="engaged"></div>	
+										<div class="m-2">
+											<small>Engaged</small>
+										</div>
+									<div class="onhold"></div>
+										<div class="m-2">
+											<small>Onhold</small>
+										</div>
+									<div class="unassigned"></div>
+										<div class="m-2">
+											<small>Unassigned</small>
+										</div>
+									<div class="closed"></div>
+										<div class="m-2">
+											<small>Closed</small>
+										</div>
+								</div>
                             </div>
 
-                            <div class="text-white font-36">
+                            <div class="text-white font-36 d-none">
 								<i class="mdi mdi-account-tie-voice-outline"></i>
 							</div>
                         </div>
-						
-						
 					</div>
 					<div class="col-lg-6 col-md-6 col-lg-6">
 						<div class="card">
@@ -468,20 +488,16 @@
 									</h4>
 									</div>
 	
-									<div class="col-auto opacity-0">
-									<!-- Tabs -->
-									<ul class="nav nav-tabs nav-tabs-sm card-header-tabs">
-										<li class="nav-item">
-										<a href="#" title="Show all transactions" class="nav-link active allLoans" data-toggle="tab">
-											A
-										</a>
-										</li>
-										<li class="nav-item">
-										<a href="#" title="Show money received" class="nav-link loanBreakdown" data-toggle="tab">
-											L
-										</a>
-										</li>									 
-									</ul>				
+									<div class="col-auto">
+											<div class="actions date_container">
+												<div id="reportrange"
+													style="background: #f3f3f3; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+													<i class="ti-calendar"></i>&nbsp;
+													<span></span> <i class="fa fa-caret-down"></i>
+												</div>  
+												<button class="btn btn-success d-none text-nowrap " id="date-reset" onclick="reset_date()">Reset Date</button>
+											</div>
+										
 									</div>
 								</div> 
 								<!-- / .row -->				
@@ -493,7 +509,34 @@
 
 							</div>
 
-						</div>						
+						</div>		
+						
+						<div class="quick-stats__item d-flex align-items-end" style="background-color: #fff;">
+                            <div class="quick-stats__info mb-0 pb-0">
+                                <h4 class="text-black font-weight-medium">Total Sessions</h2>
+                                <small class="mb-0 pb-0 d-none">22</small>
+								<div class="d-flex justify-content-start total-sessions">
+									<div class="t-completed"></div>
+									<div class="t-abandoned"></div>
+
+								</div>
+								<div class="d-flex justify-content-start align-items-center">
+									
+									<div class="completed"></div>	
+										<div class="m-2">
+											<small>Completed Sessions</small>
+										</div>
+									<div class="abandoned"></div>
+										<div class="m-2">
+											<small>Abandoned Sessions</small>
+										</div>
+								</div>
+                            </div>
+
+                            <div class="text-white font-36 d-none">
+								<i class="mdi mdi-account-tie-voice-outline"></i>
+							</div>
+                        </div>
 						
 					</div>
 

@@ -15996,3 +15996,64 @@ padding:1.25rem 2.2rem;
 .font-18px{
     font-size: 18px !important;
 }
+
+/* ticket sessions key */
+.engaged, .onhold, .unassigned, .closed, .completed, .abandoned {
+    width: 12px;
+    height: 12px;
+}
+.engaged, .completed {
+    background-color: #138c7e;
+}
+
+.onhold {
+    background-color: #999;
+}
+
+.unassigned {
+    background-color: #0f1c97;
+}
+
+.closed, .abandoned {
+    background-color: #dc3545;
+}
+
+.process, .total-sessions {
+    background-color: #fff;
+    height: 20px;
+    width: 100%;
+}
+
+.p-engaged, .p-onhold, .p-unassigned, .p-closed, .t-complete, .t-abandoned {
+    height: 20px;
+}
+
+.p-engaged, .t-completed {
+    background-color: #138c7e;
+    width: 20%;
+
+}
+
+.p-onhold {
+    background-color: #999;
+    width: 15%;
+}
+
+.p-unassigned { 
+    background-color: #0f1c97;
+    width: 35%;
+}
+
+
+.p-closed, .t-abandoned {
+    background-color: #dc3545;
+    width: 30%;
+}
+
+.t-completed {
+    width: 50%;
+}
+
+.t-abandoned {
+    width: 50%;
+}
