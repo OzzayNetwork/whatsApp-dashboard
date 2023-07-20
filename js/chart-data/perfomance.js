@@ -94,27 +94,32 @@ Highcharts.chart('perfomance', {
         colorByPoint: false,
 		color: '#075e54',// blue
         data: [{
-                name: "Parking",
+                name: "Loan repayemt",
                 y: 2000000,
                 drilldown: "Parking"
             },
             {
-                name: "Business Permits",
+                name: "Fosa Deposit",
                 y: 300000,
                 drilldown: "Business Permits"
             },
             {
-                name: "Land Rates",
+                name: "Account withdrawal  ",
                 y: 2536000,
                 drilldown: "Land Rates"
             },
             {
-                name: "Rent",
+                name: "Dividend withdrawal",
                 y: 3258023,
                 drilldown: "Rent"
             },
             {
-                name: "Bill Payments",
+                name: "LITTLE ANGEL SAVINGS",
+                y: 2225895,
+                drilldown: "Bill Payments"
+            },
+            {
+                name: "Holiday Savings",
                 y: 2225895,
                 drilldown: "Bill Payments"
             },
