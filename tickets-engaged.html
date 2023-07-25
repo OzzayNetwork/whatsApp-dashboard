@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel='icon' href='demo/img/whats-app-fav.png' type='image/x-icon'/>
+		<title>WhatsApp | Tickets</title>
+
+		<!-- icon fonts -->
+
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+
+		<!-- Vendor styles -->
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+		<link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+
+        <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+        <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+        <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+        <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+        <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+        <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+        <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+        <!-- App styles -->
+		<link rel="stylesheet" href="css/app.min.css">
+		<link rel="stylesheet" href="css/daterangepicker.css">
+	
+</head>
+
+    <body data-ma-theme="green">
+        <main class="main">
+            <div class="page-loader">
+                <div class="page-loader__spinner">
+                    <svg viewBox="25 25 50 50">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                    </svg>
+                    <img src="demo/img/gifs/preloader.gif">
+                </div>
+				<span class="powerd-container">
+					<strong>WhatsApp Dashboard by</strong>
+					<img src="demo/img/logo-files/nouveta-orange.svg">
+					
+				</span>
+            </div>
+
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                    <div class="navigation-trigger__inner">
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                        <i class="navigation-trigger__line"></i>
+                    </div>
+                </div>
+                <div class="header__logo hidden-sm-down">
+					<a href="index.html"><img class="the-logo" src="demo/img/logo-files/logo-white-notxt.png"></a>
+					<h1>
+                        <a href="index.html" class="mb-3">Kimisitu Sacco</a>
+                        <p class="mb-0 text-white font-weight-light text-capitalize font-12px">WhatsApp transactions</p>
+                    </h1>
+                </div>
+                <form class="search">
+                    <div class="search__inner">
+                        <input type="text" class="search__text" placeholder="Search site">
+                        <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                    </div>
+                </form>
+				
+				<ul class="top-nav">
+					<li class="dropdown">
+                        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-comment-more"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
+                            <div class="listview listview--hover">
+                                <div class="listview__header">
+                                   My tickets                                    
+                                </div>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            David Belle <small>12:01 PM</small>
+                                        </div>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Jonathan Morris
+                                            <small>02:45 PM</small>
+                                        </div>
+                                        <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Fredric Mitchell Jr.
+                                            <small>08:21 PM</small>
+                                        </div>
+                                        <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Glenn Jecobs
+                                            <small>08:43 PM</small>
+                                        </div>
+                                        <p>Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Bill Phillips
+                                            <small>11:32 PM</small>
+                                        </div>
+                                        <p>Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</p>
+                                    </div>
+                                </a>
+
+                                <a href="ticktes.html" class="view-more">View all tickets</a>
+                            </div>
+                        </div>
+					</li>
+					
+                    <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+					
+					<li data-toggle="tooltip" data-original-title="Time logged in" class=" top-nav__notifications p-0 m-0">
+                        <a href="#" data-toggle="dropdown"  class="top-nav__notify min-width-15px" >
+                            <i class="zmdi zmdi-time"></i>
+                        </a>
+                        
+					</li>
+					
+					<li data-toggle="tooltip" data-original-title="Time logged in " class="">
+                        <a href="#" data-toggle="dropdown"  class="" >
+                            3 min
+                        </a>
+					</li>					
+                </ul>
+
+                
+            </header>
+
+            <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                           <div class="avatar-char mr-3 font-weight-bold">JM</div>
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation">
+						<li class="navigation__active"><a href="index.html"><i class="flaticon-bar-chart" title="Human resource dashboard"></i>Dashboard</a></li>
+						
+						<li class="navigation__active" title="have a look at the departments" ><a href="transactions.html"><i class="zmdi zmdi-swap" ></i>Transactions</a></li>
+
+						<li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-whatsapp"></i>WhatsApp Logs<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="all-logs.html">All logs</a></li>
+								<li><a href="completed-sessions.html">Completed sessions</a></li>
+								<li><a href="abandoned-sessions.html">Abandoned sessions</a></li>
+								<li><a href="unique-logs.html">Unique logs</a></li>
+                            </ul>
+						</li>
+
+						<li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-comment-more"></i>Tickets<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="tickets-engaged.html">Engaged</a></li>
+								<li><a href="tickets-hold.html">On hold</a></li>
+								<li><a href="tickets-Unassigned.html">Unassigned</a></li>
+								<li><a href="tickets-closed.html">Closed</a></li>
+                            </ul>
+						</li>
+							 
+						<li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-headset-mic"></i>Customer Service<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+								<li><a href="active-customer-service-accounts.html">Active</a></li>
+								<li><a href="inactive-customer-service-accounts.html">Inactive</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-accounts"></i>Accounts<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="create-account.html">Create account</a></li>
+								<li><a href="all-accounts.html">All accounts</a></li>
+								<li><a href="inactive-accounts.html">Inactive accounts</a></li>
+                            </ul>
+						</li>
+						<li class="navigation__sub">
+							<a href="#"><i class="zmdi zmdi-power"></i>Logout</a>
+						</li>
+						
+                    </ul>
+                </div>
+            </aside>
+
+
+
+            
+            <section class="content">
+                <header class="content__title px-0 border-0">
+				 	<div class="row" >
+						<div class="col-md-5 col-sm-12">
+							<span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">All Engaged WhatsApp Tickets</h1>
+							</span>
+							<div class="">
+								<ol class="breadcrumb border-0">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item"><a href="transactions.html">Tickets</a></li>
+									<li class="breadcrumb-item active">Engaged WhatsApp Tickets</li>
+								
+								</ol>
+								
+							</div>                        
+                        </div>
+
+                        <div class="col-md-7 col-sm-12">                                       
+                            <div class="actions date_container">
+                                <div id="reportrange"
+                                    style="background: #f3f3f3; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                                    <i class="ti-calendar"></i>&nbsp;
+                                    <span></span> <i class="fa fa-caret-down"></i>
+                                </div>  
+                                <button class="btn btn-success d-none text-nowrap " id="date-reset" onclick="reset_date()">Reset Date</button>
+                            </div>
+                        </div>
+					</div>
+                </header>
+                
+
+                <div class="row ">
+                    <div class="col-12 p-0 to-be-navigated">
+                        <div class="card table-custom-bg animated fade-in">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-custom spacing8" id="data-table">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>From</th>
+                                                <th>Customer AGent</th>
+                                                <th>Body</th>
+                                                <th>Status</th>
+                                                <th>Sent Date</th>
+                                                <th>Amount</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="width45">
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>AW</span>
+                                                    </div>
+                                                </td>
+                                                <td class="the_user">
+                                                    <p class="mb-0"><a><strong>Alex Wafula</strong></a></p>
+                                                    <a href="tel:070235689" title="">070235689</a>
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0"><a><strong>Ronaldo Roro</strong></a></p>
+                                                </td>
+                                                <td>
+                                                    waiting for approval <br>
+                                                    Reply with *Home* or *Back* to go back to Main Menu
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="badge pill badge-soft-success">Read</span>
+                                                </td>
+                                                <td>
+                                                    <span>25 Jul 2019 12:56</span>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    KES 500
+                                                </td>	
+                                                <td>
+                                                    <a href="messagingLogs.html" class="btn btn-secondary btn-sm btn--icon-text">
+                                                        <i class="zmdi zmdi-eye"></i> View Logs
+                                                    </a>	
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="width45">
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>SM</span>
+                                                    </div>
+                                                </td>
+                                                <td class="the_user">
+                                                    <p class="mb-0"><a><strong>Sam Mlinzi</strong></a></p>
+                                                    <a href="tel:070235689" title="">070235689</a>
+                                                </td>
+                                                <td>
+                                                    Back
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="badge pill badge-soft-warning">Received</span>
+                                                </td>
+                                                <td>
+                                                    <span>25 Jul 2019 12:56</span>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    KES 300
+                                                </td>	
+                                                <td>
+                                                    <a href="messagingLogs.html" class="btn btn-secondary btn-sm btn--icon-text">
+                                                        <i class="zmdi zmdi-eye"></i> View Logs
+                                                    </a>	
+                                                </td>												
+                                            </tr>
+                                            <tr>
+                                                <td class="width45">
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>FK</span>
+                                                    </div>
+                                                </td>
+                                                <td class="the_user">
+                                                    <p class="mb-0"><a><strong>Faith Kazuri</strong></a></p>
+                                                    <a href="tel:070235689" title="">070235689</a>
+                                                </td>
+                                                <td>
+                                                    waiting for approval <br>
+                                                    Reply with *Home* or *Back* to go back to Main Menu
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="badge pill badge-soft-success">Read</span>
+                                                </td>
+                                                <td>
+                                                    <span>25 Jul 2019 12:56</span>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                    KES 200
+                                                </td>	
+                                                <td>
+                                                    <a href="messagingLogs.html" class="btn btn-secondary btn-sm btn--icon-text">
+                                                        <i class="zmdi zmdi-eye"></i> View Logs
+                                                    </a>	
+                                                </td>												
+                                            </tr>
+                                            <tr>
+                                                <td class="width45">
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>TJ</span>
+                                                    </div>
+                                                </td>
+                                                <td class="the_user">
+                                                    <p class="mb-0"><a><strong>Tanakali John</strong></a></p>
+                                                    <a href="tel:070235689" title="">070235689</a>
+                                                </td>
+                                                <td>
+                                                   1
+                                                </td>
+                                                <td class="text-right">
+                                                    <span class="badge pill badge-soft-warning">Received</span>
+                                                </td>
+                                                <td>
+                                                    <span>25 Jul 2019 12:56</span>
+                                                </td>
+                                                <td class="text-capitalize">
+                                                   KES 600
+                                                </td>
+                                                <td>
+                                                    <a href="messagingLogs.html" class="btn btn-secondary btn-sm btn--icon-text">
+                                                        <i class="zmdi zmdi-eye"></i> View Logs
+                                                    </a>	
+                                                </td>												
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="avtar-pic w35 bg-pink" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mary Njue">
+                                                        <span>MM</span>
+                                                    </div>
+                                                </td>
+                                                <td class="the_user">
+                                                    <p class="mb-0"><a><strong>Mark Mkimbizi</strong></a></p>
+                                                    <a href="tel:070235689" title="">070235689</a>
+                                                </td>
+                                                <td>
+                                                    Hi Customer <br>
+                                                    Did you know you can chat with me <br> to access Country services?
+                                                </td>
+                                                <td class="text-right">
+                                                     <span class="badge pill badge-soft-danger">Undelivered</span>
+                                                </td>
+                                                <td>
+                                                    <span>25 Jul 2019 12:56</span>
+                                                </td> 
+                                                <td class="text-capitalize">
+                                                   KES 450
+                                                </td>	
+                                                <td>
+                                                    <a href="messagingLogs.html" class="btn btn-secondary btn-sm btn--icon-text">
+                                                        <i class="zmdi zmdi-eye"></i> View Logs
+                                                    </a>	
+                                                </td>												
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card animated fade-in d-none">
+                            <div class="card-header new-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                    <!-- Title -->
+                                    <h4 class="card-header-title py-2">
+                                      New Department
+                                    </h4>
+                                    </div>
+    
+                                </div> 
+                                <!-- / .row -->				
+                                </div>
+                                <div class="card-body ">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-4 bg-light">
+                                           <div class="row">
+                                               <div class="col-12 padding-custom pt-4">
+                                                    <div class="form-group">
+                                                        <label><strong>Department Name</strong></label>
+                                                        <input type="text" class="form-control" placeholder="Enter Department name">
+                                                    </div>
+
+                                                    <div class="form-group mb-5">
+                                                        <label><strong>Department Head</strong></label>
+                                                        <input type="text" class="form-control" placeholder="Enter head'sEmp Num.">
+                                                        <small>Enter department's head Employee Number</small>
+                                                    </div>  
+                                                    
+                                                    <button class="btn btn-primary btn--icon-text mt-5">Add Department</button>
+                                                        
+                                                </div>
+
+                                                
+                                            </div>
+                                        
+
+                                       
+                                        </div>
+
+                                        <div class="col-sm-12 col-md-8">
+                                            <div class="row">
+                                               <div class="col-12 departmen-image">
+                                                   <img class="img" src="demo/img/form-svgs/department.svg">
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                        </div>
+                    </div>
+                </div>
+				</div>
+			
+                <footer class="footer hidden-xs-down">
+					<center><a class="nouveta-logoo" href="#"><img src="demo/img/logo-files/logo2.png" target="new"></center></a></center>
+                    <p>Powered by<a href="https://nouveta.tech/" target="new"> Levetot LTD</a></p>
+                </footer>
+            </section>
+           
+        </main>
+
+        <!-- Older IE warning message -->
+            <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+        <!-- Javascript -->
+        <!-- Vendors -->
+        <script src="vendors/jquery/jquery.min.js"></script>
+        <script src="vendors/popper.js/popper.min.js"></script>
+        <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+        <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+        <script src="vendors/flot/jquery.flot.js"></script>
+        <script src="vendors/flot/jquery.flot.resize.js"></script>
+        <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+        <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+        <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+        <script src="vendors/salvattore/salvattore.min.js"></script>
+        <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/daterangepicker/daterangepicker.min.js"></script>
+        <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+		
+		 <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="vendors/select2/js/select2.full.min.js"></script>
+        <script src="vendors/dropzone/dropzone.min.js"></script>
+        <script src="vendors/moment/moment.min.js"></script>
+        <script src="vendors/nouislider/nouislider.min.js"></script>
+        <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+        <script src="vendors/flatpickr/flatpickr.min.js"></script>
+        <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+        <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+        <script src="vendors/autosize/autosize.min.js"></script>
+		<script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+		
+		<!-- Vendors: Data tables -->
+		<script src="vendors/datatables/jquery.dataTables.min.js"></script>
+		<script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+		<script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+		<script src="vendors/jszip/jszip.min.js"></script>
+		<script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+        <!-- Charts and maps-->
+        <script src="demo/js/flot-charts/curved-line.js"></script>
+        <script src="demo/js/flot-charts/dynamic.js"></script>
+        <script src="demo/js/flot-charts/line.js"></script>
+        <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+        <script src="demo/js/other-charts.js"></script>
+        <script src="demo/js/jqvmap.js"></script>
+		
+		 <!-- high charts -->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/highcharts.js" integrity="sha512-PpL09bLaSaj5IzGNx6hsnjiIeLm9bL7Q9BB4pkhEvQSbmI0og5Sr/s7Ns/Ax4/jDrggGLdHfa9IbsvpnmoZYFA==" crossorigin="anonymous"></script>
+		 <!-- <script src="assets/libs/highcharts/highchart.js"></script> -->
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/data.min.js" integrity="sha512-z2pVXf6Q3w/tD7NnbA/u/EDW7X8VUISARx3mVRk0vGULcDRcfhA65veFZS3LWW3DM8l/MW2Oxu8PlqJa+Za4Hw==" crossorigin="anonymous"></script>    
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/drilldown.min.js" integrity="sha512-1F5YJc0seERSBvoF3csYQm+JO6qF9O+1hwUKBbOUKcRj3RnDAmKEEzuqPnCcLOtt/2h2CzsCbSy0bv0yuCfZNQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/exporting.min.js" integrity="sha512-DuFO4JhOrZK4Zz+4K0nXseP0K/daLNCrbGjSkRzK+Zibkblwqc0BYBQ1sTN7mC4Kg6vNqr8eMZwLgTcnKXF8mg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/offline-exporting.min.js" integrity="sha512-5vKhOIyF4HBeTJQ4VvTAWGuAvGMp3BbDwD6CjzZPc0T/h4D8bqvvj+D/IYyJ1ua6s72VcuQ2fPEjBn+CHR6UWQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/export-data.min.js" integrity="sha512-JFLRyhQGrSpOOboAjCGEfEm0Z+GvPcucULDdEhRFoGtJJ439x64z/F1f6GTJM7+3PGqXqgkXNc6LO/04RGsW4w==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/accessibility.min.js" integrity="sha512-cN9FFspkIN+ZS37xvtrtP4jfDc7D1BA1ma9l2YPkV47Ac70t98RjOe9gR+2dCBUkiyamLLfFtqXH+/iL0fqhjw==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/es-modules/Series/ItemSeries.min.js" integrity="sha512-UnnyAAfaraMnJOILh+bwawPvAF4+bbOXAPcUv2OREvyYTdi8TPJ4UZ+Ip8IL3mMY+cAY/yzuzq+v/EvmoZx7iA==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/streamgraph.min.js" integrity="sha512-RjmbiCs5aaU692OGy4q5YbGnHmiGexQY54rMmsY2HbaHX6OJ5AxqAtDQ9lVGubnbz+UPanupAF3avZJKY2jNWg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/series-label.min.js" integrity="sha512-ppfBb+ms2RL9FloNCD8c9mykruT6sI5ACsAdSgS69pDv/Dnn64LGewhmLnMVTCm3Zt5K2LXamZD4Ndr9EFUhMQ==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/annotations.min.js" integrity="sha512-Qq+ClgMyYirIBC34w/LXcHhviIf+DvBzPW7vi3Ekn/jHYArYe+6TCiFp74q7pkUEitJLF543JCgxVQ6ax4xBNg==" crossorigin="anonymous"></script>
+		 <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/8.2.2/modules/bullet.min.js" integrity="sha512-RsB4WtWGLsMOVX4LGEqcG7TQHJBvD/wPgSYrN4zQUSvCzhubwAlxeXgFM1+ROQ7TzKfl0L6AbiBNXyRDBFKNoA==" crossorigin="anonymous"></script>
+		<script src="js/highcharts/theme1.js"></script>
+
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/data.js"></script>
+		<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+		<!-- highcharts zoom -->
+		<script src="https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/usdeur.json"></script>
+
+		<!--owl corousel-->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+
+
+        <!-- App functions and actions -->
+     	<script src="js/wow.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>
+					
+        <script src="js/chart-data/revenue-targets.js"></script>
+        <script src="js/chart-data/revenue-streams.js"></script>
+		 <script src="js/chart-data/revenue-by-bank.js"></script>
+        <script src="js/chart-data/revenue-collected.js"></script>
+		<script src="js/chart-data/perfomance.js"></script>
+		<script src="js/chart-data/hourly-revenue-collection.js"></script>
+		<script src="js/chart-data/emp-gender.js"></script>
+		<script src="js/chart-data/customers-served.js"></script>
+		
+	
+		<!--map scripts-->
+		
+		<script src="js/chart-data/map-data.js"></script>
+		
+       
+		
+		
+		
+    </body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
+</html>
